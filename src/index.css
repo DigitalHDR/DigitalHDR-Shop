@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #1f1f1f;
+  background-color: #1b1b1b;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +37,8 @@ code {
   --global-preco-cor: #6dbaee;
 
   --global-star: #ffff00;
+
+  --global-footer: #6dbaee;
 }
 
 .container_global {
