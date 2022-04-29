@@ -1,0 +1,29 @@
+.box_card {
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-gap: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card_container {
+  margin-top: 50px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+
+.card_container img {
+  width: 100%;
+}
+
+.box_btn {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

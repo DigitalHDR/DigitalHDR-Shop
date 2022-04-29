@@ -14,16 +14,16 @@ export default function Header(props) {
         <nav>
           <BsMoonStars className="icon_style" />
           <Link to="/">
-            <Botao global={global}>Home</Botao>
+            <Botao btn={global}>Home</Botao>
           </Link>
           <Link to="/produtos">
-            <Botao global={global}>Produtos</Botao>
+            <Botao btn={global}>Produtos</Botao>
           </Link>
           <Link to="/lojas">
-            <Botao global={global}>Lojas</Botao>
+            <Botao btn={global}>Lojas</Botao>
           </Link>
           <Link to="/sobre">
-            <Botao global={global}>Sobre</Botao>
+            <Botao btn={global}>Sobre</Botao>
           </Link>
           <Link to="/login">
             <Botao>Login</Botao>
