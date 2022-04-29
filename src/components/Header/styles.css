@@ -1,0 +1,25 @@
+.header_container {
+  background-color: #0b0b0b;
+  padding: 20px 0;
+}
+
+.header_container h1 {
+  color: #fff;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_menu nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_style {
+  color: #fff;
+  font-size: 20px;
+}
