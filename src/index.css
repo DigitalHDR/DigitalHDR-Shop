@@ -10,6 +10,7 @@
 }
 
 body {
+  background-color: #1f1f1f;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,8 +24,19 @@ code {
 :root {
   --global-btn-bg: #eeff00;
   --global-btn-color: #000000;
+
   --global-login-logout: #6dbaee;
+
   --global-border-radius: 20px;
+
+  --global-texto: #c7c4c4;
+
+  --global-titulos-pequenos-cor: #222127;
+  --global-titulos-pequenos-font: 18px;
+
+  --global-preco-cor: #6dbaee;
+
+  --global-star: #ffff00;
 }
 
 .container_global {
