@@ -9,7 +9,7 @@ const data = {
       preco: 2.1509,
     },
     {
-      id: 1,
+      id: 2,
       titulo: 'Controle Dualshock 4 - PlayStation 4 - Preto',
       descricao:
         'Sua experiência com os jogos do Playstation, com certeza, não são as mesmas depois de experimentar o Dualshock 4. O toque, o formato anatômico, a sensibilidade dos controles analógicos e os botões com gatilho oferecem aos jogadores muito conforto',
@@ -17,7 +17,7 @@ const data = {
       preco: 320.83,
     },
     {
-      id: 1,
+      id: 3,
       titulo: 'Controle Com textura PlayStation 4 - Preto',
       descricao:
         'Controle para Ps4 Sem Fio Recarregável Joystick Preto. ocê pode passar horas jogando com total conforto. Conta com botões macios, gatilhos rápidos, touchpad funcional e analógicos firmes e precisos, além de contar também com função de vibração para uma melhor experiência na hora do jogo. ',
@@ -25,7 +25,7 @@ const data = {
       preco: 250.54,
     },
     {
-      id: 1,
+      id: 4,
       titulo: 'Sony PlayStation 4 Slim 1TB Mega Pack:',
       descricao:
         'Com seu console PlayStation 4 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.',
@@ -33,7 +33,7 @@ const data = {
       preco: 1.96899,
     },
     {
-      id: 1,
+      id: 5,
       titulo: 'Sony PlayStation 4 Slim 1TB Mega Pack + 3 Games grátis',
       descricao:
         'O PS4 é centrado nos jogadores, possibilitando que eles joguem quando, onde e como quiserem, possibilita que os maiores desenvolvedores de jogos do mundo deem asas à sua criatividade e transcendam os limites do ato de jogar por meio de um sistema que é ajustado especialmente para suas necessidades.',
@@ -41,7 +41,7 @@ const data = {
       preco: 2.2329,
     },
     {
-      id: 1,
+      id: 6,
       titulo:
         'Sony PlayStation 4 Slim 1TB Mega Pack: + 1 Games grátis e + um controle para jogar com a familia',
       descricao:
@@ -50,7 +50,7 @@ const data = {
       preco: 2.1245,
     },
     {
-      id: 1,
+      id: 7,
       titulo: 'PlayStation 5 2020 Nova Geração 825GB 1 Controle - Branco Sony',
       descricao:
         'novo PlayStation 5 diz tudo sobre o console lançado em 2020. Desfrute do carregamento extremamente rápido com o SSD de 825GB de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para PlayStation.',
@@ -58,7 +58,7 @@ const data = {
       preco: 4.79965,
     },
     {
-      id: 1,
+      id: 8,
       titulo: 'Controle Dualsense PlayStation 5 PS5',
       descricao:
         'O controle sem fio branco DualSense também inclui um microfone integrado e botão de criação, tudo em um design icônico e confortável. O feedback háptico, que adiciona uma variedade de sensações poderosas que sentirá quando jogar,',
@@ -66,7 +66,7 @@ const data = {
       preco: 419.9,
     },
     {
-      id: 1,
+      id: 9,
       titulo:
         'Console PlayStation 5 Controle Dual Sense PS5 Branco Preto - Sony',
       descricao:
@@ -75,7 +75,7 @@ const data = {
       preco: 5.3048,
     },
     {
-      id: 1,
+      id: 10,
       titulo: 'Controle PS5 Dualsense Branco Original',
       descricao:
         'A integração personalizada dos sistemas de console PS5 permite que os criadores extraiam dados do SSD tão rápido que eles podem desenvolver jogos de formas que antes seriam impossíveis.',
@@ -83,7 +83,7 @@ const data = {
       preco: 420.56,
     },
     {
-      id: 1,
+      id: 11,
       titulo: 'Console Switch Tela Oled 7 polegadas 64gb',
       descricao:
         'O novo sistema Switch foi projetado para apresentar uma tela OLED vibrante de 7 polegadas para cores vivas e contraste nítido, onde quer que você esteja a jogar, dispõe de amplo suporte ajustável para desfrutar de ângulo adequado, bem como um dock com porta LAN com fio e 64gb de capacidade de armazenamento interno, sendo uma parte reservada para uso pelo sistema e a outra para salvar seus jogos favoritos, além de áudio aprimor',
@@ -91,7 +91,7 @@ const data = {
       preco: 2.30476,
     },
     {
-      id: 1,
+      id: 12,
       titulo: 'Controle PS5 Dualsense Preto Original',
       descricao:
         'Conta com botões macios, gatilhos rápidos, touchpad funcional e analógicos firmes e precisos, além de contar também com função de vibração para uma melhor experiência na hora do jogo.',
@@ -99,7 +99,7 @@ const data = {
       preco: 450.24,
     },
     {
-      id: 1,
+      id: 13,
       titulo: 'PlayStation 5 PRO Controle Dual Sense PS5 Preto',
       descricao:
         'Com uma TV HDR, os jogos compatíveis do PS5 exibem uma variedade de cores inacreditavelmente vibrantes e realistas. Saída em 8K Os consoles PS5 oferecem suporte à saída 8K, para que você possa jogar na sua tela com resolução de 4320p.',
@@ -107,7 +107,7 @@ const data = {
       preco: 4.23564,
     },
     {
-      id: 1,
+      id: 14,
       titulo: 'Xbox Series X 2Tb branco',
       descricao:
         'Apresentamos o Xbox Series X, nosso console mais rápido e poderoso de todos os tempos. Jogue milhares de títulos de quatro gerações de consoles- todos os jogos têm melhor aparência e são melhor executados no Xbox Series X. No coração do Series X está a Xbox Velocity Architecture, que combina um SSD personalizado e software integrado para diminuir significativamente os tempos de carregamento dentro e fora do jogo. Troque simultaneamente entre vários jogos em um instante com o Quick Resume.',
@@ -115,7 +115,7 @@ const data = {
       preco: 4.47649,
     },
     {
-      id: 1,
+      id: 15,
       titulo: 'Xbox Series S 2Tb Preto',
       descricao:
         'Jogue milhares de títulos de quatro gerações de consoles- todos os jogos têm melhor aparência e são melhor executados no Xbox Series X. No coração do Series X está a Xbox Velocity Architecture, que combina um SSD personalizado e software integrado para diminuir significativamente os tempos de carregamento dentro e fora do jogo.',
@@ -123,7 +123,7 @@ const data = {
       preco: 4.99639,
     },
     {
-      id: 1,
+      id: 16,
       titulo: 'Controle para Xbox Series X Xbox',
       descricao:
         'Experimente o design modernizado do Controle Sem Fio para Xbx Series X/S Robot White na cor branca, com superfícies esculpidas e geometria refinada para maior conforto durante o jogo. Fique no alvo com o grip texturizado e um direcional híbrido. Capture e compartilhe conteúdo perfeitamente com um botão Compartilhar dedicado. Conecte-se, jogue e alterne rapidamente entre dispositivos',
@@ -131,7 +131,7 @@ const data = {
       preco: 353.87,
     },
     {
-      id: 1,
+      id: 17,
       titulo: 'Xbox Series X Halo Infinite - Edição Epecial',
       descricao:
         'Xbox Series X Edição Especial, Comemore o 20º aniversário de Halo e enfrente o inimigo mais implacável que já passou pelo Master com a edição especial Xbox Series X Halo Infinite.',
@@ -139,7 +139,7 @@ const data = {
       preco: 6.83483,
     },
     {
-      id: 1,
+      id: 18,
       titulo: 'Controle para Xbox Series X Xbox Pretp',
       descricao:
         'com superfícies esculpidas e geometria refinada para maior conforto durante o jogo. Fique no alvo com o grip texturizado e um direcional híbrido. Capture e compartilhe conteúdo perfeitamente com um botão Compartilhar dedicado. Conecte-se, jogue e alterne rapidamente entre dispositivos',
@@ -147,7 +147,7 @@ const data = {
       preco: 353.87,
     },
     {
-      id: 1,
+      id: 19,
       titulo:
         'Console New Nintendo Switch - Azul Neon e Vermelho Neon (versão nacional)',
       descricao:
@@ -156,7 +156,7 @@ const data = {
       preco: 2.3549,
     },
     {
-      id: 1,
+      id: 20,
       titulo: 'Suporte Para Nintendo Switch',
       descricao:
         'Dobrável para portabilidade, Angulo ajustável Apertos emborrachados para estabilidade, Oficialmente licenciado pela Nintendo',
@@ -164,7 +164,7 @@ const data = {
       preco: 123.28,
     },
     {
-      id: 1,
+      id: 21,
       titulo: 'Videogame Playstation 3 Super Slim',
       descricao:
         '1 Console Super Slim 250Gb Mostruário de loja (estado de novo)NÃO ACOMPANHA A CAIXA ORIGINAL1 Cabo HDMI1 Cabo Energia1 Cabo AV1 Controle Dual Shock Sony1 Jogo de aleatório (mandamos o disponível no momento da postagem,',
@@ -172,7 +172,7 @@ const data = {
       preco: 1.4933,
     },
     {
-      id: 1,
+      id: 22,
       titulo: 'Videogame Playstation 3 Super Slim + 45 games',
       descricao:
         'Com seu console PlayStation 3 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.',
@@ -180,7 +180,7 @@ const data = {
       preco: 1.9838,
     },
     {
-      id: 1,
+      id: 23,
       titulo: 'controle ps3 original - Controle Para playstation 3 - sony dual',
       descricao:
         'O sistema SIXAXIS, responde precisamente a cada movimento que você fizer em 6 eixos proporcionando uma sensação incrível a cada jogada. Você pode jogar com os amigos e quem mais desejar de diversos cantos da casa. O controle DualShock pode ser carregado facilmente através do cabo USB. O Playstation 3 suporta até sete controles sem fio simultaneamente, assim seus jogos multiplayer serão muito mais divertidos.',
@@ -188,7 +188,7 @@ const data = {
       preco: 146.43,
     },
     {
-      id: 1,
+      id: 24,
       titulo: 'controle ps3 original com fio 2 metro',
       descricao:
         'Você pode jogar com os amigos e quem mais desejar de diversos cantos da casa. O controle DualShock pode ser carregado facilmente através do cabo USB. O Playstation 3 suporta até sete controles sem fio simultaneamente, assim seus jogos multiplayer serão muito mais divertidos.',
@@ -196,7 +196,7 @@ const data = {
       preco: 120.67,
     },
     {
-      id: 1,
+      id: 25,
       titulo: 'Controle Sony Dualshock 4 PS4, Sem Fio, Preto',
       descricao:
         'Revolucionário, intuitivo e preciso: o controle sem fio DualShock 4 para o sistema PlayStation 4 define esta geração de jogos, combinando recursos revolucionários e conforto com controles precisos e intuitivos',
