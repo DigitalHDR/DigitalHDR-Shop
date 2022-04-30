@@ -1,24 +1,23 @@
-import React from 'react'
+import React from 'react';
 import api from '../../data/apiDados';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
 import Botao from '../../components/Botao';
+import { useParams } from 'react-router-dom';
 
-export default function ProdutosDetalhes() {
+export default function ProdutoDetalhe() {
+  const { idProtudo } = useParams();
+  const protudo = api.especificacao.find((este) => este.id === Number(idProtudo))
   return (
     <div className="container_global">
       <div className="box_card">
-        {api.especificacao.map((item, index) => (
-          <li className="card_container" key={index}>
-            <img src={item.imagem} alt={item.titulo} />
-
+          <li className="card_container">
+            <img src={protudo.imagem} alt={protudo.titulo} />
             <strong>
-              <h3>{item.titulo}</h3>
+              <h3>{protudo.titulo}</h3>
             </strong>
-
             <div className="descricao">
-              <p>{item.descricao.substring(0, 80) + '...'}</p>
+              <p>{protudo.descricao.substring(0, 80) + '...'}</p>
             </div>
-
             <div className="box_preco">
               <div>
                 <MdStar className="star" />
@@ -27,14 +26,12 @@ export default function ProdutosDetalhes() {
                 <MdStarHalf className="star" />
                 <MdStarBorder className="star" />
               </div>
-              <span>R$ {item.preco}</span>
+              <span>R$ {protudo.preco}</span>
             </div>
-
             <div className="box_btn">
               <Botao btn={global}>Detalhes</Botao>
             </div>
           </li>
-        ))}
       </div>
     </div>
   );

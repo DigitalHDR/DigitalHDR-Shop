@@ -3,6 +3,7 @@ import api from '../../data/apiDados';
 import './styles.css';
 import Botao from '../../components/Botao';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
+import { Link } from "react-router-dom";
 
 export default function Produtos() {
   return (
@@ -32,7 +33,9 @@ export default function Produtos() {
             </div>
 
             <div className="box_btn">
-              <Botao btn={global}>Detalhes</Botao>
+              <Botao btn={global}>
+                <Link to={`/produtoDetalhe/${item.id}`}>Detalhes</Link>
+              </Botao>
             </div>
           </li>
         ))}

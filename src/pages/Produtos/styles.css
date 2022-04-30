@@ -16,7 +16,7 @@
   background-color: #4b4a4a;
   overflow: hidden;
   border-radius: var(--global-border-radius);
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.2s ease-in-out;
 }
 
 .card_container:hover {
@@ -33,7 +33,7 @@
   padding: 5px 10px;
 }
 
-.card_container strong  h3 {
+.card_container strong h3 {
   font-size: var(--global-titulos-pequenos-font);
   color: var(--global-titulos-pequenos-cor);
 }
@@ -58,10 +58,14 @@
   padding: 10px;
 }
 
+.box_btn a {
+  color: var(--global-btn-color);
+}
+
 .star {
   font-size: 18px;
   color: var(--global-star);
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.2s ease-in-out;
 }
 
 .star:hover {
