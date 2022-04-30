@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import api from '../../data/apiDados';
-import './styles.css';
-import Botao from '../../components/Botao';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
+import Botao from '../../components/Botao';
 
-export default function Produtos() {
+export default function ProdutosDetalhes() {
   return (
     <div className="container_global">
       <div className="box_card">
