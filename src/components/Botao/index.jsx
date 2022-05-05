@@ -6,7 +6,7 @@ export default function Botao(props) {
       type="submit"
       className={
         props.btn
-          ? 'global_btn global_btn_backgroud'
+          ? 'global_btn  global_btn_backgroud'
           : 'login_logout global_btn_login_logout'
       }
     >

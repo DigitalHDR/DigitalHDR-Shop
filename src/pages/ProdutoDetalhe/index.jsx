@@ -1,37 +1,45 @@
 import React from 'react';
+import './styles.css';
 import api from '../../data/apiDados';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
 import Botao from '../../components/Botao';
 import { useParams } from 'react-router-dom';
 
-export default function ProdutoDetalhe() {
+export default function ProdutoDetalhe(props) {
   const { idProtudo } = useParams();
-  const protudo = api.especificacao.find((este) => este.id === Number(idProtudo))
+  const protudo = api.especificacao.find(
+    (este) => este.id === Number(idProtudo)
+  );
   return (
     <div className="container_global">
-      <div className="box_card">
-          <li className="card_container">
+      <div className="container_cart_id">
+        <div className="card_id">
+          <div className="container_img_id">
             <img src={protudo.imagem} alt={protudo.titulo} />
-            <strong>
-              <h3>{protudo.titulo}</h3>
-            </strong>
-            <div className="descricao">
-              <p>{protudo.descricao.substring(0, 80) + '...'}</p>
-            </div>
-            <div className="box_preco">
-              <div>
+          </div>
+
+          <div className="container_descricao_id">
+            <h3 className="titulo_id">{protudo.titulo}</h3>
+            <p>{protudo.descricao}</p>
+
+            <div className='box_star_preco'>
+              <div className="star_id">
                 <MdStar className="star" />
                 <MdStar className="star" />
                 <MdStar className="star" />
                 <MdStarHalf className="star" />
                 <MdStarBorder className="star" />
               </div>
-              <span>R$ {protudo.preco}</span>
+
+              <span className="preco_id">R${protudo.preco}</span>
             </div>
-            <div className="box_btn">
-              <Botao btn={global}>Detalhes</Botao>
+
+            <div className="btn_id">
+              <Botao btn={global}>Adicionar no carrinho</Botao>
+              <Botao btn={global}>Comprar</Botao>
             </div>
-          </li>
+          </div>
+        </div>
       </div>
     </div>
   );
