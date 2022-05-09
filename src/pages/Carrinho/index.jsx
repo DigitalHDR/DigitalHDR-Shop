@@ -2,8 +2,13 @@ import React from 'react';
 import Botao from '../../components/Botao';
 import './styles.css';
 import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 
 export default function Carrinho() {
+  const itensAdicionados = useSelector((state) => state.carrinho)
+
+  console.log('mues itens', itensAdicionados)
+
   return (
     <div className="container_global">
       <div className="container_cart_carrinho">

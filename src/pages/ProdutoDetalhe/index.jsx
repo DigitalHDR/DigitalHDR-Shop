@@ -1,3 +1,4 @@
+//src/pages/produtosdetalhes
 import React from 'react';
 import './styles.css';
 import api from '../../data/apiDados';
