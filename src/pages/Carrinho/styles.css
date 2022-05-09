@@ -1,0 +1,71 @@
+.container_cart_carrinho {
+  display: flex;
+  justify-content: center;
+}
+
+.card_carrinho {
+  margin-top: 50px;
+  width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.container_img_carrinho {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.container_img_carrinho img {
+  width: 300px;
+  object-fit: contain;
+}
+
+.container_descricao_carrinho {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--global-card_bg);
+}
+
+.box_titulo_btnDelete {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnDelete {
+  font-size: 25px;
+  color: var(--global-login-logout);
+}
+
+.box_titulo_descricao {
+  flex-grow: 1;
+}
+
+.container_descricao_carrinho p {
+  color: var(--global-texto);
+}
+
+.preco_carrinho {
+  font-weight: 500;
+  color: var(--global-login-logout);
+}
+
+.box_preco_btn {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box_preco_btn input {
+  width: 41px;
+}
+
+.btnRemove,
+.btnAdd {
+  font-size: 16px;
+}
