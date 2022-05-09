@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BsMoonStars } from 'react-icons/bs';
 import './styles.css';
 import Botao from '../Botao';
+import { MdOutlineShoppingCart } from 'react-icons/md';
 
 export default function Header(props) {
   return (
@@ -30,6 +31,9 @@ export default function Header(props) {
           </Link>
           <Link to="/logout">
             <Botao>Logout</Botao>
+          </Link>
+          <Link to="/carrinho">
+            <MdOutlineShoppingCart className="btn_Cart" />
           </Link>
         </nav>
       </div>

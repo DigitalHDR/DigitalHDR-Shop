@@ -9,10 +9,7 @@ export default function Carrinho() {
       <div className="container_cart_carrinho">
         <div className="card_carrinho">
           <div className="container_img_carrinho">
-            <img
-              src="https://static.quizur.com/i/b/57fb93849db9c5.39865275naruto%20uzumaki.jpg"
-              alt="s"
-            />
+            <img src="https://i.postimg.cc/3JM0KMv3/14.png" alt="s" />
           </div>
 
           <div className="container_descricao_carrinho">
@@ -30,7 +27,7 @@ export default function Carrinho() {
 
             <div className="box_preco_btn">
               <div>
-                <span className="preco_carrinho">R$11.12</span>
+                <span className="preco_carrinho">R$11.11</span>
               </div>
 
               <div className="btn_carrinho">
