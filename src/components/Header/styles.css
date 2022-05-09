@@ -27,3 +27,14 @@
 .btn_Cart {
   font-size: 20px;
 }
+
+.box_carrinho_quantidade_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantidadeDeItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

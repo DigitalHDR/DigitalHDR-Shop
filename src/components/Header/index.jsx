@@ -4,8 +4,11 @@ import { BsMoonStars } from 'react-icons/bs';
 import './styles.css';
 import Botao from '../Botao';
 import { MdOutlineShoppingCart } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 
 export default function Header(props) {
+  const itemQuantidade = useSelector((state) => state.carrinho);
+
   return (
     <header className="header_container">
       <div className="container_global header_menu">
@@ -33,7 +36,10 @@ export default function Header(props) {
             <Botao>Logout</Botao>
           </Link>
           <Link to="/carrinho">
-            <MdOutlineShoppingCart className="btn_Cart" />
+            <div className='box_carrinho_quantidade_item'>
+              <span className="quantidadeDeItem">{itemQuantidade.length}</span>
+              <MdOutlineShoppingCart className="btn_Cart" />
+            </div>
           </Link>
         </nav>
       </div>
