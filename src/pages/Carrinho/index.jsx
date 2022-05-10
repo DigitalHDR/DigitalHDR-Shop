@@ -4,9 +4,11 @@ import Botao from '../../components/Botao';
 import './styles.css';
 import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
 import { useSelector } from 'react-redux';
+import formataDinheiro from '../../functions';
 
 export default function Carrinho() {
   const itensAdicionados = useSelector((state) => state.carrinho);
+
   return (
     <div className="container_global">
       <div className="container_cart_carrinho">
@@ -27,7 +29,9 @@ export default function Carrinho() {
 
               <div className="box_preco_btn">
                 <div>
-                  <span className="preco_carrinho">{item.preco}</span>
+                  <span className="preco_carrinho">
+                    {formataDinheiro(item.preco)}
+                  </span>
                 </div>
 
                 <div className="btn_carrinho">

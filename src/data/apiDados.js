@@ -6,7 +6,7 @@ const data = {
       descricao:
         'Console Nintendo Switch O console que lhe permite jogar os jogos que quiser, onde e como quiser. witcnde e como quiser. witcnde e como quiser. witcnde e como quiser. witch',
       imagem: 'https://i.postimg.cc/2yLks5wn/1.png',
-      preco: 2.1509,
+      preco: 2150.91,
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const data = {
       descricao:
         'Com seu console PlayStation 4 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.',
       imagem: 'https://i.postimg.cc/Xq5ZwLTM/12.png',
-      preco: 1.96899,
+      preco: 1968.99,
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ const data = {
       descricao:
         'O PS4 é centrado nos jogadores, possibilitando que eles joguem quando, onde e como quiserem, possibilita que os maiores desenvolvedores de jogos do mundo deem asas à sua criatividade e transcendam os limites do ato de jogar por meio de um sistema que é ajustado especialmente para suas necessidades.',
       imagem: 'https://i.postimg.cc/59QFd9jP/13.png',
-      preco: 2.2329,
+      preco: 2232.90,
     },
     {
       id: 6,
@@ -47,7 +47,7 @@ const data = {
       descricao:
         'Centrado no jogador, inspirado no desenvolvedor- o ps4 permite que os melhores desenvolvedores de jogos do mundo liberem sua criatividade e estendam os limites do jogo por meio de uma plataforma que está sintonizada especificamente com suas necessidades.',
       imagem: 'https://i.postimg.cc/3JM0KMv3/14.png',
-      preco: 2.1245,
+      preco: 2124.50,
     },
     {
       id: 7,
@@ -55,7 +55,7 @@ const data = {
       descricao:
         'novo PlayStation 5 diz tudo sobre o console lançado em 2020. Desfrute do carregamento extremamente rápido com o SSD de 825GB de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para PlayStation.',
       imagem: 'https://i.postimg.cc/5NwYyPBL/16.png',
-      preco: 4.79965,
+      preco: 4799.65,
     },
     {
       id: 8,
@@ -63,7 +63,7 @@ const data = {
       descricao:
         'O controle sem fio branco DualSense também inclui um microfone integrado e botão de criação, tudo em um design icônico e confortável. O feedback háptico, que adiciona uma variedade de sensações poderosas que sentirá quando jogar,',
       imagem: 'https://i.postimg.cc/T30KqpHP/17.png',
-      preco: 419.9,
+      preco: 419.90,
     },
     {
       id: 9,
@@ -72,7 +72,7 @@ const data = {
       descricao:
         'PlayStation 5 Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console PlayStation 5 pode fazer. Maximize suas sessões de jogo com tempos de carregamento praticamente instantâneos para jogos instalados. A integração personalizada dos sistemas de console PS5 permite que os criadores extraiam dados do SSD tão rápido que eles podem desenvolver jogos de formas que antes seriam impossíveis. ',
       imagem: 'https://i.postimg.cc/xddcsnW3/18.png',
-      preco: 5.3048,
+      preco: 5304.80,
     },
     {
       id: 10,
@@ -88,7 +88,7 @@ const data = {
       descricao:
         'O novo sistema Switch foi projetado para apresentar uma tela OLED vibrante de 7 polegadas para cores vivas e contraste nítido, onde quer que você esteja a jogar, dispõe de amplo suporte ajustável para desfrutar de ângulo adequado, bem como um dock com porta LAN com fio e 64gb de capacidade de armazenamento interno, sendo uma parte reservada para uso pelo sistema e a outra para salvar seus jogos favoritos, além de áudio aprimor',
       imagem: 'https://i.postimg.cc/fk4zDh2p/2.png',
-      preco: 2.30476,
+      preco: 2304.76,
     },
     {
       id: 12,
@@ -104,7 +104,7 @@ const data = {
       descricao:
         'Com uma TV HDR, os jogos compatíveis do PS5 exibem uma variedade de cores inacreditavelmente vibrantes e realistas. Saída em 8K Os consoles PS5 oferecem suporte à saída 8K, para que você possa jogar na sua tela com resolução de 4320p.',
       imagem: 'https://i.postimg.cc/ydMxY9WL/21.png',
-      preco: 4.23564,
+      preco: 4235.64,
     },
     {
       id: 14,
@@ -112,7 +112,7 @@ const data = {
       descricao:
         'Apresentamos o Xbox Series X, nosso console mais rápido e poderoso de todos os tempos. Jogue milhares de títulos de quatro gerações de consoles- todos os jogos têm melhor aparência e são melhor executados no Xbox Series X. No coração do Series X está a Xbox Velocity Architecture, que combina um SSD personalizado e software integrado para diminuir significativamente os tempos de carregamento dentro e fora do jogo. Troque simultaneamente entre vários jogos em um instante com o Quick Resume.',
       imagem: 'https://i.postimg.cc/tCHJKhKT/22.png',
-      preco: 4.47649,
+      preco: 4476.49,
     },
     {
       id: 15,
@@ -120,7 +120,7 @@ const data = {
       descricao:
         'Jogue milhares de títulos de quatro gerações de consoles- todos os jogos têm melhor aparência e são melhor executados no Xbox Series X. No coração do Series X está a Xbox Velocity Architecture, que combina um SSD personalizado e software integrado para diminuir significativamente os tempos de carregamento dentro e fora do jogo.',
       imagem: 'https://i.postimg.cc/3N2RyRvY/23.png',
-      preco: 4.99639,
+      preco: 4996.39,
     },
     {
       id: 16,
@@ -136,7 +136,7 @@ const data = {
       descricao:
         'Xbox Series X Edição Especial, Comemore o 20º aniversário de Halo e enfrente o inimigo mais implacável que já passou pelo Master com a edição especial Xbox Series X Halo Infinite.',
       imagem: 'https://i.postimg.cc/8PBcN7Gb/25.png',
-      preco: 6.83483,
+      preco: 6834.83,
     },
     {
       id: 18,
@@ -153,7 +153,7 @@ const data = {
       descricao:
         'Modelo com bateria estendida; duração varia de acordo com os jogos ou aplicações utilizados; com The Legend of Zelda: Breath of the Wild, por exemplo, a bateria dura aproximadamente 5, 5 horas',
       imagem: 'https://i.postimg.cc/GhYYY3CB/3.png',
-      preco: 2.3549,
+      preco: 2354.90,
     },
     {
       id: 20,
@@ -169,7 +169,7 @@ const data = {
       descricao:
         '1 Console Super Slim 250Gb Mostruário de loja (estado de novo)NÃO ACOMPANHA A CAIXA ORIGINAL1 Cabo HDMI1 Cabo Energia1 Cabo AV1 Controle Dual Shock Sony1 Jogo de aleatório (mandamos o disponível no momento da postagem,',
       imagem: 'https://i.postimg.cc/9XsZrRv5/5.png',
-      preco: 1.4933,
+      preco: 1493.30,
     },
     {
       id: 22,
@@ -177,7 +177,7 @@ const data = {
       descricao:
         'Com seu console PlayStation 3 você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.',
       imagem: 'https://i.postimg.cc/7Zn2sBbw/6.png',
-      preco: 1.9838,
+      preco: 1983.80,
     },
     {
       id: 23,
