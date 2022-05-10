@@ -4,7 +4,7 @@ import './styles.css';
 import Botao from '../../components/Botao';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
 import { Link } from "react-router-dom";
-import formataDinheiro from '../../functions';
+import formataDinheiro from '../../functions/dinheiroFormatado';
 
 export default function Produtos() {
   return (

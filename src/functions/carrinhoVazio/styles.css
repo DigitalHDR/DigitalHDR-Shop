@@ -1,0 +1,4 @@
+.carrinhoVazio {
+ color: var(--global-texto);
+  margin-top: 100px;
+}

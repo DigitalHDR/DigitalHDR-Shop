@@ -7,7 +7,7 @@ import Botao from '../../components/Botao';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/modules/carrinho/actions';
-import formataDinheiro from '../../functions';
+import formataDinheiro from '../../functions/dinheiroFormatado';
 
 export default function ProdutoDetalhe(props) {
   const dispatch = useDispatch();
