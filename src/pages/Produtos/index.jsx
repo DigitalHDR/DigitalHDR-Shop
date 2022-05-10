@@ -5,10 +5,12 @@ import Botao from '../../components/Botao';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import formataDinheiro from '../../functions/dinheiroFormatado';
+import TituloDaPagina from '../../components/TitiloDaPagina';
 
 export default function Produtos() {
   return (
     <div className="container_global">
+    <TituloDaPagina>Lista de Produtos</TituloDaPagina>
       <div className="box_card">
         {api.especificacao.map((item, index) => (
           <li className="card_container" key={index}>

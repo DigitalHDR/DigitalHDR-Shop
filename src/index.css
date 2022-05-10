@@ -41,6 +41,8 @@ code {
   --global-star: #ffff00;
 
   --global-footer: #6dbaee;
+
+  --global-nome-de-marcas: #eeff00;
 }
 
 .container_global {
@@ -70,4 +72,10 @@ a {
 
 .global_btn_login_logout {
   background-color: var(--global-login-logout);
+}
+
+.nomeDeMarcas {
+  color: var(--global-nome-de-marcas);
+  font-weight: 300;
+  cursor: pointer;
 }

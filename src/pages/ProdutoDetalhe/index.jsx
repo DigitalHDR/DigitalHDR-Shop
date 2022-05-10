@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/modules/carrinho/actions';
 import formataDinheiro from '../../functions/dinheiroFormatado';
+import TituloDaPagina from '../../components/TitiloDaPagina';
 
 export default function ProdutoDetalhe(props) {
   const dispatch = useDispatch();
@@ -15,14 +16,15 @@ export default function ProdutoDetalhe(props) {
   const { idProtudo } = useParams();
   const protudo = api.especificacao.find(
     (este) => este.id === Number(idProtudo)
-  )
+  );
 
   function AddItemNoCarrinho(item) {
-    dispatch(addItem(item))
+    dispatch(addItem(item));
   }
 
   return (
     <div className="container_global">
+      <TituloDaPagina>{protudo.titulo}</TituloDaPagina>
       <div className="container_cart_id">
         <div className="card_id">
           <div className="container_img_id">
@@ -30,9 +32,11 @@ export default function ProdutoDetalhe(props) {
           </div>
 
           <div className="container_descricao_id">
-            <h3 className="titulo_id">{protudo.titulo}</h3>
+            {/* <h3 className="titulo_id">{protudo.titulo}</h3> */}
             <p>{protudo.descricao}</p>
-
+            <p>
+              Vendido e entrege por <strong className='nomeDeMarcas'>DigitalHDR</strong>
+            </p>
             <div className="box_star_preco">
               <div className="star_id">
                 <MdStar className="star" />
@@ -41,8 +45,10 @@ export default function ProdutoDetalhe(props) {
                 <MdStarHalf className="star" />
                 <MdStarBorder className="star" />
               </div>
-
               <span className="preco_id">{formataDinheiro(protudo.preco)}</span>
+              <p>
+                Á Vista no <strong className='nomeDeMarcas'>Pix</strong> com descontos de até 10%
+              </p>
             </div>
 
             <div className="btn_id">

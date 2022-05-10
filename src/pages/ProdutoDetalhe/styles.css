@@ -1,5 +1,5 @@
 .container_cart_id {
-  min-height: calc(71vh - 71px);
+  /* min-height: calc(71vh - 71px); */
   display: flex;
   justify-content: center;
 }
@@ -22,23 +22,19 @@
 
 .container_img_id img {
   width: 500px;
-  padding: 30px 0 30px 0;
-  object-fit: contain;
 }
 
 .container_descricao_id {
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   background-color: var(--global-card_bg);
 }
 
 .container_descricao_id p {
-  font-size: 18px;
-  padding: 20px 0px;
-  font-weight: 500;
-  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--global-texto);
 }
 

@@ -6,11 +6,13 @@ import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import formataDinheiro from '../../functions/dinheiroFormatado';
 import carrinhoVazio from '../../functions/carrinhoVazio';
+import TituloDaPagina from '../../components/TitiloDaPagina';
 
 export default function Carrinho() {
   const itensAdicionados = useSelector((state) => state.carrinho)
   return (
     <div className="container_global">
+    <TituloDaPagina>Lista de Ítens no Carrinho</TituloDaPagina>
       <div className="container_cart_carrinho">
         {itensAdicionados.length === 0
           ? carrinhoVazio()
