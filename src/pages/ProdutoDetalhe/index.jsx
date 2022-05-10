@@ -7,6 +7,7 @@ import Botao from '../../components/Botao';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/modules/carrinho/actions';
+import formataDinheiro from '../../functions';
 
 export default function ProdutoDetalhe(props) {
   const dispatch = useDispatch();
@@ -41,11 +42,11 @@ export default function ProdutoDetalhe(props) {
                 <MdStarBorder className="star" />
               </div>
 
-              <span className="preco_id">R${protudo.preco}</span>
+              <span className="preco_id">{formataDinheiro(protudo.preco)}</span>
             </div>
 
             <div className="btn_id">
-              <Botao btn={global} >
+              <Botao btn={global}>
                 <div onClick={() => AddItemNoCarrinho(protudo)}>
                   Adicionar no carrinho
                 </div>

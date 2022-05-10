@@ -4,6 +4,7 @@ import './styles.css';
 import Botao from '../../components/Botao';
 import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
 import { Link } from "react-router-dom";
+import formataDinheiro from '../../functions';
 
 export default function Produtos() {
   return (
@@ -29,7 +30,7 @@ export default function Produtos() {
                 <MdStarHalf className="star" />
                 <MdStarBorder className="star" />
               </div>
-              <span>R$ {item.preco}</span>
+              <span>{formataDinheiro(item.preco)}</span>
             </div>
 
             <div className="box_btn">
