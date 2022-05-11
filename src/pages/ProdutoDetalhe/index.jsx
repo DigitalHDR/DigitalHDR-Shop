@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/modules/carrinho/actions';
 import formataDinheiro from '../../functions/dinheiroFormatado';
 import TituloDaPagina from '../../components/TitiloDaPagina';
+import porcentagemRiscada from '../../functions/porcentagemRiscada';
 
 export default function ProdutoDetalhe(props) {
   const dispatch = useDispatch();
@@ -35,7 +36,8 @@ export default function ProdutoDetalhe(props) {
             {/* <h3 className="titulo_id">{protudo.titulo}</h3> */}
             <p>{protudo.descricao}</p>
             <p>
-              Vendido e entrege por <strong className='nomeDeMarcas'>DigitalHDR</strong>
+              Vendido e entrege por{' '}
+              <strong className="nomeDeMarcas">DigitalHDR</strong>
             </p>
             <div className="box_star_preco">
               <div className="star_id">
@@ -45,9 +47,13 @@ export default function ProdutoDetalhe(props) {
                 <MdStarHalf className="star" />
                 <MdStarBorder className="star" />
               </div>
+              <span className="dinheiro_riscado">
+                {formataDinheiro(porcentagemRiscada(protudo.preco, 107))}
+              </span>
               <span className="preco_id">{formataDinheiro(protudo.preco)}</span>
               <p>
-                Á Vista no <strong className='nomeDeMarcas'>Pix</strong> com descontos de até 10%
+                Á Vista no <strong className="nomeDeMarcas">Pix</strong> com
+                descontos de até 10%
               </p>
             </div>
 

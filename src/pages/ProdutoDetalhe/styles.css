@@ -56,6 +56,13 @@
 }
 
 .box_star_preco {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.dinheiro_riscado {
+  color: var(--global-texto);
+  font-size: 20px;
+  text-decoration: line-through;
 }

@@ -1,4 +1,17 @@
+.container_carrinho_vazio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .carrinhoVazio {
  color: var(--global-texto);
   margin-top: 100px;
+}
+
+.icone_carrinho_vazio {
+  text-align: center;
+  color: var(--global-texto);
+  font-size: 100px;
 }

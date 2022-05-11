@@ -2,7 +2,6 @@
 import produce from "immer"
 
 export default function carrinho(state = [], action) {
-  console.log(state);
   switch (action.type) {
     case 'ADD_ITEM':
       return produce(state, (draft) => {
