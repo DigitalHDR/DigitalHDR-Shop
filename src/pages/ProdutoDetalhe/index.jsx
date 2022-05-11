@@ -11,20 +11,20 @@ import formataDinheiro from '../../functions/dinheiroFormatado';
 import TituloDaPagina from '../../components/TitiloDaPagina';
 import porcentagemRiscada from '../../functions/porcentagemRiscada';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProdutoDetalhe(props) {
-  const notify = () =>
-    toast.success('Adicionado com sucesso!', {
-      position: 'top-right',
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-    });
+  // const notify = () =>
+  //   toast.success('Adicionado com sucesso!', {
+  //     position: 'top-right',
+  //     autoClose: 1000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: false,
+  //     draggable: false,
+  //     progress: undefined,
+  //   });
 
   const dispatch = useDispatch();
 
@@ -72,10 +72,10 @@ export default function ProdutoDetalhe(props) {
             </div>
 
             <div className="btn_id">
-              <div onClick={() => [notify(), AddItemNoCarrinho(protudo)]}>
-                <Botao btn={global}>
+              <div onClick={() => AddItemNoCarrinho(protudo)}>
+                <Botao btn={global} addItem={addItem}>
                   Adicionar no carrinho
-                  <ToastContainer
+                  {/* <ToastContainer
                     position="top-right"
                     autoClose={1000}
                     hideProgressBar={false}
@@ -85,7 +85,7 @@ export default function ProdutoDetalhe(props) {
                     pauseOnFocusLoss={false}
                     draggable={false}
                     pauseOnHover={false}
-                  />
+                  /> */}
                 </Botao>
               </div>
 

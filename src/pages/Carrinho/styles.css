@@ -38,8 +38,15 @@
 }
 
 .btnDelete {
+  cursor: pointer;
   font-size: 25px;
   color: var(--global-login-logout);
+  transition: all ease-in-out 0.3s;
+}
+
+.btnDelete:hover {
+transform: scale(1.35);
+  color: var(--global-carrinho-lixeira);
 }
 
 .box_titulo_descricao {
@@ -56,17 +63,27 @@
 }
 
 .box_preco_btn {
-  margin-top: auto;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .box_preco_btn input {
-  width: 41px;
+  width: 43px;
+  text-align: center;
 }
 
 .btnRemove,
 .btnAdd {
   font-size: 16px;
+}
+
+.btn_carrinho {
+  display: flex;
+  align-items: center;
+}
+
+.btn_carrinho imput {
+  height: 10px;
 }

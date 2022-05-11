@@ -1,6 +1,7 @@
 //scr/pages/carrinho
 import React from 'react';
-import Botao from '../../components/Botao';
+// import Botao from '../../components/Botao';
+import BotaoAddRemove from '../../components/BotaoAddRemove';
 import './styles.css';
 import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
@@ -50,13 +51,13 @@ export default function Carrinho() {
                     </div>
 
                     <div className="btn_carrinho">
-                      <Botao btn={global}>
+                      <BotaoAddRemove>
                         <MdRemove className="btnRemove" />
-                      </Botao>
+                      </BotaoAddRemove>
                       <input type="text" readOnly value={item.quantidade} />
-                      <Botao btn={global}>
+                      <BotaoAddRemove>
                         <MdAdd className="btnAdd" />
-                      </Botao>
+                      </BotaoAddRemove>
                     </div>
                   </div>
                 </div>

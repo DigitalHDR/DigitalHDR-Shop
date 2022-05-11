@@ -18,7 +18,16 @@
 `usado quando adicionar item no carrinho`
 # função do alert caso item já estaja no carrinho mostrar outro tipo de alerta (tipo: item já esta no carrinho)
 
+
+`animação nos card dos protudos(item)`
+`animação na lixeira do carrinho`
+
+
 ===========
 `bug no icone da lixeiro de tiver mais de uma linha no titulo`
 (Sony PlayStation 4 Slim 1TB Mega Pack: + 1 Games grátis e + um controle para jogar com a familia)
 
+===========
+# não criar componente de botão usando buttão da problema, que por enquanto não sei resolver, criar com div.
+
+# criar mais de um componente do tipo botão com div, e não dar margem.
