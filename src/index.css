@@ -53,6 +53,11 @@ a {
   color: #fff;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
 
 /* botões */
 .global_btn,

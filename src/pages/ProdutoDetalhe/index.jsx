@@ -11,7 +11,21 @@ import formataDinheiro from '../../functions/dinheiroFormatado';
 import TituloDaPagina from '../../components/TitiloDaPagina';
 import porcentagemRiscada from '../../functions/porcentagemRiscada';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function ProdutoDetalhe(props) {
+  const notify = () =>
+    toast.success('Adicionado com sucesso!', {
+      position: 'top-right',
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+    });
+
   const dispatch = useDispatch();
 
   const { idProtudo } = useParams();
@@ -58,11 +72,22 @@ export default function ProdutoDetalhe(props) {
             </div>
 
             <div className="btn_id">
-              <Botao btn={global}>
-                <div onClick={() => AddItemNoCarrinho(protudo)}>
+              <div onClick={() => [notify(), AddItemNoCarrinho(protudo)]}>
+                <Botao btn={global}>
                   Adicionar no carrinho
-                </div>
-              </Botao>
+                  <ToastContainer
+                    position="top-right"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss={false}
+                    draggable={false}
+                    pauseOnHover={false}
+                  />
+                </Botao>
+              </div>
 
               <Botao btn={global}>
                 <div>Comprar</div>

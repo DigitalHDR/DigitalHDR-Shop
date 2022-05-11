@@ -12,6 +12,8 @@
 `Função que da uma porcentagem em cima do valor real do item 7%`
 `no caso mostrando o valor que era antes com texto riscado`
 ===============================
+`add biblioteca paar fazer um alert personalizado`
+===============================
 
 
 `bug no icone da lixeiro de tiver mais de uma linha no titulo`
