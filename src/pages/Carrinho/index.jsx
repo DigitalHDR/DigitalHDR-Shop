@@ -3,21 +3,28 @@ import React from 'react';
 import Botao from '../../components/Botao';
 import './styles.css';
 import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import formataDinheiro from '../../functions/dinheiroFormatado';
 import carrinhoVazio from '../../functions/carrinhoVazio';
 import TituloDaPagina from '../../components/TitiloDaPagina';
+import { removeItem } from '../../store/modules/carrinho/actions';
 
 export default function Carrinho() {
-  const itensAdicionados = useSelector((state) => state.carrinho)
+  const dispatch = useDispatch()
+
+  function handleRemove(id) {
+    dispatch(removeItem(id))
+  }
+
+  const itensAdicionados = useSelector((state) => state.carrinho);
   return (
     <div className="container_global">
-    <TituloDaPagina>Lista de Ítens no Carrinho</TituloDaPagina>
+      <TituloDaPagina>Lista de Ítens no Carrinho</TituloDaPagina>
       <div className="container_cart_carrinho">
         {itensAdicionados.length === 0
           ? carrinhoVazio()
-          : itensAdicionados.map((item) => (
-              <div className="card_carrinho">
+          : itensAdicionados.map((item, index) => (
+              <div className="card_carrinho" key={index}>
                 <div className="container_img_carrinho">
                   <img src={item.imagem} alt={item.titulo} />
                 </div>
@@ -28,7 +35,9 @@ export default function Carrinho() {
                       <h3 className="titulo_carrinho">
                         {item.titulo.substring(0, 60)}
                       </h3>
-                      <MdDeleteOutline className="btnDelete" />
+                      <div onClick={() => handleRemove(item.id)}>
+                        <MdDeleteOutline className="btnDelete" />
+                      </div>
                     </div>
                     <p>{item.descricao}</p>
                   </div>

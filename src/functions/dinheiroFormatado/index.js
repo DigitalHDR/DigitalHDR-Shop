@@ -1,3 +1,4 @@
+//src/functions/dinheiroFormatado
 export default function formataDinheiro(dinheiro) {
   const realBrasileiro = Intl.NumberFormat('pt-BR', {
     style: 'currency',

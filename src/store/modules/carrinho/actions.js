@@ -5,3 +5,10 @@ export function addItem(item) {
     item,
   };
 }
+
+export function removeItem(id) {
+  return {
+    type: 'REMOVE_ITEM',
+    id
+  }
+}

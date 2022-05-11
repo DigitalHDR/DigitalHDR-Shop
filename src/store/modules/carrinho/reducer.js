@@ -1,11 +1,12 @@
 //scr/store/modules/carrinho
-import produce from "immer"
+import produce from 'immer';
 
 export default function carrinho(state = [], action) {
   switch (action.type) {
+    
     case 'ADD_ITEM':
       return produce(state, (draft) => {
-        const itemIndex = draft.findIndex((item) => item.id === action.item.id)
+        const itemIndex = draft.findIndex((item) => item.id === action.item.id);
         if (itemIndex >= 0) {
           draft[itemIndex].data += 1;
         } else {
@@ -14,8 +15,17 @@ export default function carrinho(state = [], action) {
             quantidade: 1,
           });
         }
+      });
+
+    case 'REMOVE_ITEM':
+      return produce(state, (draft) => {
+        const itemIndex = draft.findIndex((item) => item.id === action.id)
+        if(itemIndex => 0) {
+          draft.splice(itemIndex, 1)
+        }
       })
-      default:
-      return state
+
+    default:
+      return state;
   }
 }
