@@ -14,7 +14,7 @@ const data = {
       descricao:
         'Sua experiência com os jogos do Playstation, com certeza, não são as mesmas depois de experimentar o Dualshock 4. O toque, o formato anatômico, a sensibilidade dos controles analógicos e os botões com gatilho oferecem aos jogadores muito conforto',
       imagem: 'https://i.postimg.cc/Y9hLSMRC/10.png',
-      preco: 320.83,
+      preco: 300.00,
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const data = {
       descricao:
         'Controle para Ps4 Sem Fio Recarregável Joystick Preto. ocê pode passar horas jogando com total conforto. Conta com botões macios, gatilhos rápidos, touchpad funcional e analógicos firmes e precisos, além de contar também com função de vibração para uma melhor experiência na hora do jogo. ',
       imagem: 'https://i.postimg.cc/V6prrpZB/11.png',
-      preco: 250.54,
+      preco: 250.00,
     },
     {
       id: 4,
