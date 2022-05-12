@@ -7,6 +7,7 @@ import formataDinheiro from '../../functions/dinheiroFormatado';
 import carrinhoVazio from '../../functions/carrinhoVazio';
 import TituloDaPagina from '../../components/TitiloDaPagina';
 import { removeItem, atualizaItem } from '../../store/modules/carrinho/actions';
+import ValorTotal from '../../components/ValorTotal';
 
 export default function Carrinho() {
   const dispatch = useDispatch();
@@ -25,15 +26,15 @@ export default function Carrinho() {
 
   const itensAdicionados = useSelector((state) => state.carrinho);
 
-  let total = 0;
-  const somaTotalDeItens = (apenasUmparametro) => {
-    total += apenasUmparametro.preco * apenasUmparametro.quantidade;
-  };
+  // let total = 0;
+  // const somaTotalDeItens = (apenasUmparametro) => {
+  //   total += apenasUmparametro.preco * apenasUmparametro.quantidade;
+  // };
 
-  let quantidadeTotal = 0;
-  const somaQuantidadeTotal = (e) => {
-    quantidadeTotal += e.quantidade;
-  };
+  // let quantidadeTotal = 0;
+  // const somaQuantidadeTotal = (e) => {
+  //   quantidadeTotal += e.quantidade;
+  // };
 
   return (
     <div className="container_global">
@@ -87,38 +88,9 @@ export default function Carrinho() {
       </div>
 
       {itensAdicionados.length > 0 && (
-        <div className="container_cart_carrinho">
-          <div className="card_carrinho">
-            <div className="container_descricao_carrinho">
-              <div className="box_titulo_descricao">
-                <div className="box_titulo_btnDelete">
-                  <h3 className="preco_carrinho">Fazer a comprar</h3>
-                  <h3 className="preco_carrinho">Valor Total</h3>
-                </div>
-              </div>
-              <div className="preco_total">
-                <span className="texto_valorTotal">
-                  Total de {itensAdicionados.length > 1 ? 'itens' : 'item'}
-                  {': '}
-                  <span className="totalCor">{itensAdicionados.length}</span>
-                </span>
-                {itensAdicionados.map(somaTotalDeItens)}
-                <span className="totalCor">
-                  {formataDinheiro(total.toFixed(2))}
-                </span>
-              </div>
-              <div>
-                <span className="texto_valorTotal">
-                  {itensAdicionados.map(somaQuantidadeTotal)}
-                  Quantidade de {quantidadeTotal > 1 ? 'itens' : 'item'}
-                  {': '}
-                  <span className="totalCor">{quantidadeTotal}</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ValorTotal />
       )}
+
     </div>
-  );
+  )
 }
