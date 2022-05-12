@@ -12,3 +12,11 @@ export function removeItem(id) {
     id
   }
 }
+
+export function atualizaItem(id, quantidade) {
+  return {
+    type: 'ATUALIZA_ITEM',
+    id,
+    quantidade,
+  };
+}

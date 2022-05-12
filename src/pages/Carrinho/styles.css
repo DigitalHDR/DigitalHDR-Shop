@@ -87,3 +87,14 @@ transform: scale(1.35);
 .btn_carrinho imput {
   height: 10px;
 }
+
+.btn_add_remove {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--global-btn-bg);
+}

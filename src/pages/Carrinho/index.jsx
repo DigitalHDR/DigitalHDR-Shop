@@ -1,20 +1,26 @@
 //scr/pages/carrinho
 import React from 'react';
-// import Botao from '../../components/Botao';
-import BotaoAddRemove from '../../components/BotaoAddRemove';
 import './styles.css';
 import { MdAdd, MdRemove, MdDeleteOutline } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import formataDinheiro from '../../functions/dinheiroFormatado';
 import carrinhoVazio from '../../functions/carrinhoVazio';
 import TituloDaPagina from '../../components/TitiloDaPagina';
-import { removeItem } from '../../store/modules/carrinho/actions';
+import { removeItem, atualizaItem } from '../../store/modules/carrinho/actions';
 
 export default function Carrinho() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   function handleRemove(id) {
-    dispatch(removeItem(id))
+    dispatch(removeItem(id));
+  }
+
+  function decrementa(item) {
+    dispatch(atualizaItem(item.id, item.quantidade - 1));
+  }
+
+  function incrementa(item) {
+    dispatch(atualizaItem(item.id, item.quantidade + 1));
   }
 
   const itensAdicionados = useSelector((state) => state.carrinho);
@@ -29,7 +35,6 @@ export default function Carrinho() {
                 <div className="container_img_carrinho">
                   <img src={item.imagem} alt={item.titulo} />
                 </div>
-
                 <div className="container_descricao_carrinho">
                   <div className="box_titulo_descricao">
                     <div className="box_titulo_btnDelete">
@@ -42,22 +47,26 @@ export default function Carrinho() {
                     </div>
                     <p>{item.descricao}</p>
                   </div>
-
                   <div className="box_preco_btn">
                     <div>
                       <span className="preco_carrinho">
                         {formataDinheiro(item.preco)}
                       </span>
                     </div>
-
                     <div className="btn_carrinho">
-                      <BotaoAddRemove>
+                      <button
+                        className="btn_add_remove"
+                        onClick={() => decrementa(item)}
+                      >
                         <MdRemove className="btnRemove" />
-                      </BotaoAddRemove>
+                      </button>
                       <input type="text" readOnly value={item.quantidade} />
-                      <BotaoAddRemove>
+                      <button
+                        className="btn_add_remove"
+                        onClick={() => incrementa(item)}
+                      >
                         <MdAdd className="btnAdd" />
-                      </BotaoAddRemove>
+                      </button>
                     </div>
                   </div>
                 </div>
