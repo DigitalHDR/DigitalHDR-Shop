@@ -75,6 +75,13 @@ button {
   color: var(--global-btn-color);
 }
 
+@media (max-width: 410px) {
+  .global_btn {
+    text-align: center;
+    margin: 10px 0px;
+  }
+}
+
 .global_btn_backgroud {
   background-color: var(--global-btn-bg);
 }

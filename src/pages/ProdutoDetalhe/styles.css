@@ -66,3 +66,28 @@
   font-size: 20px;
   text-decoration: line-through;
 }
+
+@media (max-width: 988px) {
+  .card_id {
+    max-width: 500px;
+    flex-direction: column;
+  }
+
+  .container_img_id {
+    width: 100%;
+  }
+
+  .container_img_id img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 405px) {
+  .btn_id {
+    flex-direction: column-reverse;
+  }
+
+  .preco_id {
+    font-size: 30px;
+  }
+}

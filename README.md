@@ -37,3 +37,5 @@
 # criar mais de um componente do tipo botão com div, e não dar margem.
 
 # deixar sempre um item no carrinho comentado pra não ter que ficar add depois, no código
+
+# quando for criar componente enviar junto com o .map() se tiver junto com a tag pai que ela estiver, ficar mais facil.

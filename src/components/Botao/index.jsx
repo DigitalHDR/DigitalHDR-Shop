@@ -13,7 +13,7 @@ export default function Botao(props) {
       pauseOnHover: false,
       draggable: false,
       progress: undefined,
-    });
+    })
 
   return (
     <div
@@ -39,5 +39,5 @@ export default function Botao(props) {
         pauseOnHover={false}
       />
     </div>
-  );
+  )
 }

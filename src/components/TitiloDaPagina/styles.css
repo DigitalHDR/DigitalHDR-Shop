@@ -3,3 +3,9 @@
   text-align: center;
   color: var(--global-texto);
 }
+
+@media (max-width: 720px) {
+  .tituloDaPagina {
+  font-size: 25px;
+}
+}
