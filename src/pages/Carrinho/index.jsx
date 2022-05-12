@@ -25,10 +25,15 @@ export default function Carrinho() {
 
   const itensAdicionados = useSelector((state) => state.carrinho);
 
-  let total = 0
+  let total = 0;
   const somaTotalDeItens = (apenasUmparametro) => {
     total += apenasUmparametro.preco * apenasUmparametro.quantidade;
-  }
+  };
+
+  let quantidadeTotal = 0;
+  const somaQuantidadeTotal = (e) => {
+    quantidadeTotal += e.quantidade;
+  };
 
   return (
     <div className="container_global">
@@ -87,17 +92,31 @@ export default function Carrinho() {
             <div className="box_titulo_descricao">
               <div className="box_titulo_btnDelete">
                 <h3 className="preco_carrinho">Fazer a comprar</h3>
-                <h3 className="preco_carrinho">Total</h3>
+                <h3 className="preco_carrinho">Valor Total</h3>
               </div>
             </div>
+
             <div className="preco_total">
               <span className="preco_carrinho">
                 Total de {itensAdicionados.length > 1 ? 'itens' : 'item'}
                 {': '}
-                {itensAdicionados.length}
+                <span className="totalCor">{itensAdicionados.length}</span>
               </span>
               {itensAdicionados.map(somaTotalDeItens)}
-              <span className="preco_carrinho">{total.toFixed(2)}</span>
+              <span className="totalCor">
+                {formataDinheiro(total.toFixed(2))}
+              </span>
+            </div>
+
+            <div>
+              <span className="preco_carrinho">
+                Quantidade de {somaQuantidadeTotal > 1 ? 'itens' : 'item'}
+                {': '}
+                {itensAdicionados.map(somaQuantidadeTotal)}
+                <span className="totalCor">
+                  {quantidadeTotal}
+                </span>
+              </span>
             </div>
           </div>
         </div>
