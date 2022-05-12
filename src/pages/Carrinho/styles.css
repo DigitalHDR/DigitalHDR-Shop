@@ -109,3 +109,7 @@ transform: scale(1.35);
   font-weight: 300 !important;
   color: var(--global-preco-total-quantidade);
 }
+
+.texto_valorTotal {
+  color: var(--global-texto);
+}
