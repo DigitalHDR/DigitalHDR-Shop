@@ -109,9 +109,9 @@ export default function Carrinho() {
               </div>
               <div>
                 <span className="texto_valorTotal">
-                  Quantidade de {somaQuantidadeTotal > 1 ? 'itens' : 'item'}
-                  {': '}
                   {itensAdicionados.map(somaQuantidadeTotal)}
+                  Quantidade de {quantidadeTotal > 1 ? 'itens' : 'item'}
+                  {': '}
                   <span className="totalCor">{quantidadeTotal}</span>
                 </span>
               </div>
