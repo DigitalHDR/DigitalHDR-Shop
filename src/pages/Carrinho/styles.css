@@ -98,3 +98,8 @@ transform: scale(1.35);
   cursor: pointer;
   background-color: var(--global-btn-bg);
 }
+
+.preco_total {
+  display: flex;
+  justify-content: space-between;
+}
