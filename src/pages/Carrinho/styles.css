@@ -45,7 +45,7 @@
 }
 
 .btnDelete:hover {
-transform: scale(1.35);
+  transform: scale(1.35);
   color: var(--global-carrinho-lixeira);
 }
 
@@ -112,4 +112,26 @@ transform: scale(1.35);
 
 .texto_valorTotal {
   color: var(--global-texto);
+}
+
+@media (max-width: 988px) {
+  .card_carrinho {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .card_carrinho {
+    flex-direction: column;
+  }
+
+  .container_img_carrinho {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 405px) {
+  .container_img_carrinho img {
+    width: 100%;
+  }
 }
