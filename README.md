@@ -20,18 +20,24 @@
 
 `add biblioteca de alert personalizado`
 `usado quando adicionar item no carrinho`
-# função do alert caso item já estaja no carrinho mostrar outro tipo de alerta (tipo: item já esta no carrinho)
-
 
 `animação nos card dos protudos(item)`
+
 `animação na lixeira do carrinho`
 
+`Função para ativar o menu-Hamburguer após clicar nele`
+
+`Lógica para fechar o menu-Hamburguer pós clicar em algum dos links`
+
+`Função no useEffect para fechar o menu-Hamburguer após a barra de rolagem da página ser ativado`
+
+# função do alert caso item já estaja no carrinho mostrar outro tipo de alerta (tipo: item já esta no carrinho)
 
 ===========
-`bug no icone da lixeiro de tiver mais de uma linha no titulo`
-(Sony PlayStation 4 Slim 1TB Mega Pack: + 1 Games grátis e + um controle para jogar com a familia)
-
+`bug no alert não sei como resolver`
 ===========
+
+
 # não criar componente de botão usando button da problema, que por enquanto não sei resolver, criar com div.
 
 # criar mais de um componente do tipo botão com div, e não dar margem.

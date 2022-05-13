@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BsMoonStars } from 'react-icons/bs';
 import './styles.css';
@@ -12,6 +12,14 @@ export default function Header(props) {
 
   const [ativaMenu, setAtivaMenu] = useState(false);
 
+  useEffect(()=> {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 1) {
+        setAtivaMenu(false)
+      }
+    })
+  },[])
+
   return (
     <header className="header_container">
       <div className="container_global header_menu">
@@ -20,22 +28,22 @@ export default function Header(props) {
         </h1>
 
         <nav id={ativaMenu ? 'ativa' : ''}>
-          <Link to="/">
+          <Link to="/" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Home</Botao>
           </Link>
-          <Link to="/produtos">
+          <Link to="/produtos" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Produtos</Botao>
           </Link>
-          <Link to="/lojas">
+          <Link to="/lojas" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Lojas</Botao>
           </Link>
-          <Link to="/sobre">
+          <Link to="/sobre" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Sobre</Botao>
           </Link>
-          <Link to="/login">
+          <Link to="/login" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao>Login</Botao>
           </Link>
-          <Link to="/logout">
+          <Link to="/logout" onClick={()=> setAtivaMenu(!ativaMenu)}>
             <Botao>Logout</Botao>
           </Link>
         </nav>
