@@ -5,18 +5,18 @@
 
 .header_container h1 {
   color: #fff;
+  display: flex;
+  flex-grow: 1;
 }
 
 .header_menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header_menu nav {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .icon_style {
@@ -38,4 +38,49 @@
   justify-content: center;
   align-items: center;
   color: var(--global-nome-de-marcas);
+}
+
+.menuHamburguer {
+  display: none;
+}
+
+.box_icone_DarkMode {
+  margin: 0 10px;
+}
+
+@media (max-width: 988px) {
+  .header_menu nav {
+    display: none;
+  }
+
+  .menuHamburguer {
+    display: flex;
+  }
+
+  #ativa {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: absolute;
+    top: 79px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--global-card_bg);
+    border-bottom: 2px solid var(--global-menu-hamburguer-border);
+    border-top: 2px solid var(--global-menu-hamburguer-border);
+  }
+
+  #ativa a {
+    margin: 10px;
+    width: 100%;
+  }
+
+  #ativa a div{
+    margin-left: 0px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  #ativa a div:hover{
+    margin-left: 10px;
+  }
 }

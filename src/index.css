@@ -47,6 +47,10 @@ code {
   --global-carrinho-lixeira: #ff0000;
 
   --global-preco-total-quantidade: #eeff00;
+
+  --global-menu-hamburguer-hover: #00000073;
+
+  --global-menu-hamburguer-border: #ffffff54;
 }
 
 .container_global {
@@ -94,4 +98,22 @@ button {
   color: var(--global-nome-de-marcas);
   font-weight: 300;
   cursor: pointer;
+}
+
+@media (max-width: 988px) {
+  .global_btn_backgroud {
+    background-color: transparent;
+    color: var(--global-nome-de-marcas);
+  }
+
+  .global_btn_login_logout {
+    background-color: transparent;
+    color: var(--global-preco-cor);
+  }
+
+  .global_btn_backgroud:hover,
+  .global_btn_login_logout:hover {
+    transform: rotateX(1.9);
+    background-color: var(--global-menu-hamburguer-hover);
+  }
 }
