@@ -4,7 +4,7 @@ import { BsMoonStars } from 'react-icons/bs';
 import './styles.css';
 import Botao from '../Botao';
 import { MdOutlineShoppingCart } from 'react-icons/md';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 
 export default function Header(props) {
@@ -44,10 +44,14 @@ export default function Header(props) {
           className="menuHamburguer"
           onClick={() => setAtivaMenu(!ativaMenu)}
         >
-          <AiOutlineMenu color="#fff" fontSize={30} />
+          {!ativaMenu ? (
+            <AiOutlineMenu color="#fff" fontSize={30} />
+          ) : (
+            <AiOutlineClose color="#fff" fontSize={30} />
+          )}
         </div>
 
-        <div className='box_icone_DarkMode'>
+        <div className="box_icone_DarkMode">
           <BsMoonStars className="icon_style" />
         </div>
 

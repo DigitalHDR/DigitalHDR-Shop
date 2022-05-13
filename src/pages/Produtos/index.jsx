@@ -1,16 +1,17 @@
-import React from 'react';
-import api from '../../data/apiDados';
-import './styles.css';
-import Botao from '../../components/Botao';
-import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
-import { Link } from "react-router-dom";
-import formataDinheiro from '../../functions/dinheiroFormatado';
-import TituloDaPagina from '../../components/TitiloDaPagina';
+import React from 'react'
+import api from '../../data/apiDados'
+import './styles.css'
+// import Botao from '../../components/Botao';
+import BotaoDetalhes from '../../components/BotaoDetalhes'
+import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import formataDinheiro from '../../functions/dinheiroFormatado'
+import TituloDaPagina from '../../components/TitiloDaPagina'
 
 export default function Produtos() {
   return (
     <div className="container_global">
-    <TituloDaPagina>Lista de Produtos</TituloDaPagina>
+      <TituloDaPagina>Lista de Produtos</TituloDaPagina>
       <div className="box_card">
         {api.especificacao.map((item, index) => (
           <li className="card_container" key={index}>
@@ -36,13 +37,13 @@ export default function Produtos() {
             </div>
 
             <div className="box_btn">
-              <Botao btn={global}>
+              <BotaoDetalhes btn={global}>
                 <Link to={`/produtoDetalhe/${item.id}`}>Detalhes</Link>
-              </Botao>
+              </BotaoDetalhes>
             </div>
           </li>
         ))}
       </div>
     </div>
-  );
+  )
 }

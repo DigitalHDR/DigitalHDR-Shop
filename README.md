@@ -39,3 +39,5 @@
 # deixar sempre um item no carrinho comentado pra não ter que ficar add depois, no código
 
 # quando for criar componente enviar junto com o .map() se tiver junto com a tag pai que ela estiver, ficar mais facil.
+
+# criar um botao para cada elemento, tive problema de cor pois o btn do header é o mesmo do componente de card.

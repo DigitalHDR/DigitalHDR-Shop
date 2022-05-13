@@ -1,40 +1,26 @@
 //src/pages/produtosdetalhes
-import React from 'react';
-import './styles.css';
-import api from '../../data/apiDados';
-import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md';
-import Botao from '../../components/Botao';
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../../store/modules/carrinho/actions';
-import formataDinheiro from '../../functions/dinheiroFormatado';
-import TituloDaPagina from '../../components/TitiloDaPagina';
-import porcentagemRiscada from '../../functions/porcentagemRiscada';
-
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import React from 'react'
+import './styles.css'
+import api from '../../data/apiDados'
+import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md'
+import BotaoDetalhes from '../../components/BotaoDetalhes'
+import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../../store/modules/carrinho/actions'
+import formataDinheiro from '../../functions/dinheiroFormatado'
+import TituloDaPagina from '../../components/TitiloDaPagina'
+import porcentagemRiscada from '../../functions/porcentagemRiscada'
 
 export default function ProdutoDetalhe(props) {
-  // const notify = () =>
-  //   toast.success('Adicionado com sucesso!', {
-  //     position: 'top-right',
-  //     autoClose: 1000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: false,
-  //     draggable: false,
-  //     progress: undefined,
-  //   });
+  function notify() {return null}
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
-  const { idProtudo } = useParams();
-  const protudo = api.especificacao.find(
-    (este) => este.id === Number(idProtudo)
-  );
+  const { idProtudo } = useParams()
+  const protudo = api.especificacao.find(este => este.id === Number(idProtudo))
 
   function AddItemNoCarrinho(item) {
-    dispatch(addItem(item));
+    dispatch(addItem(item))
   }
 
   return (
@@ -47,7 +33,6 @@ export default function ProdutoDetalhe(props) {
           </div>
 
           <div className="container_descricao_id">
-            {/* <h3 className="titulo_id">{protudo.titulo}</h3> */}
             <p>{protudo.descricao}</p>
             <p>
               Vendido e entrege por{' '}
@@ -73,29 +58,17 @@ export default function ProdutoDetalhe(props) {
 
             <div className="btn_id">
               <div onClick={() => AddItemNoCarrinho(protudo)}>
-                <Botao btn={global} addItem={addItem}>
+                <BotaoDetalhes addItem={notify}>
                   Adicionar no carrinho
-                  {/* <ToastContainer
-                    position="top-right"
-                    autoClose={1000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss={false}
-                    draggable={false}
-                    pauseOnHover={false}
-                  /> */}
-                </Botao>
+                </BotaoDetalhes>
               </div>
-
-              <Botao btn={global}>
+              <BotaoDetalhes>
                 <div>Comprar</div>
-              </Botao>
+              </BotaoDetalhes>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

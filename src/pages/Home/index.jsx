@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 // import api from '../../data/apiDados';
-import './styles.css';
-import TituloDaPagina from '../../components/TitiloDaPagina';
+import './styles.css'
+import TituloDaPagina from '../../components/TitiloDaPagina'
 
 export default function Home() {
   return (
