@@ -20,6 +20,11 @@
   flex: none;
   border-radius: var(--global-border-radius);
   border: 1px solid rgb(0, 0, 0);
+  transition: all ease-in-out 0.3s;
+}
+
+.carrossel_item:hover {
+  transform: scale(1.05);
 }
 
 .carrossel_image {
@@ -57,7 +62,7 @@
   align-items: center;
   position: relative;
   justify-content: space-between;
-  top: -276px;
+  top: -283px;
   z-index: 10;
 }
 
@@ -70,7 +75,7 @@
   position: absolute;
   font-size: 40px;
   transition: all ease-in-out 0.3s;
-  height: 265px;
+  height: 279px;
   color: var(--global-carrossel_setas);
   background-color: var(--global-carrossel-bg-setas);
   opacity: 0;
@@ -91,4 +96,10 @@
 
 .carrossel_info_start {
   text-align: center;
+}
+
+@media (max-width: 425px) {
+  .carrossel_btn {
+    display: none;
+  }
 }

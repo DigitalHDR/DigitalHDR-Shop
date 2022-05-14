@@ -11,12 +11,12 @@ export default function CarrosselHome() {
 
   function handleLeftClick(e) {
     e.preventDefault()
-    carrosel.current.scrollLeft -= carrosel.current.offsetWidth
+    carrosel.current.scrollLeft -= carrosel.current.offsetWidth / 1.5
   }
 
   function handleRigthClick(e) {
     e.preventDefault()
-    carrosel.current.scrollLeft += carrosel.current.offsetWidth
+    carrosel.current.scrollLeft += carrosel.current.offsetWidth / 1.5
   }
 
   return (
@@ -35,10 +35,10 @@ export default function CarrosselHome() {
                   </div>
                   <div className="carrossel_info">
                     <p className="carrossel_titulo">
-                      {titulo.substring(0, 30) + '...'}
+                      {titulo.substring(0, 60) + '...'}
                     </p>
-                    <div className='carrossel_info_start'>
-                    <Stars />
+                    <div className="carrossel_info_start">
+                      <Stars />
                     </div>
                     <p className="carrossel_preco">
                       {dinheiroFormatado(preco)}
