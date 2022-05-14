@@ -42,15 +42,18 @@ code {
 
   --global-footer: #6dbaee;
 
-  --global-nome-de-marcas: #eeff00;
+  --global-nome-de-marcas: #ffff00;
 
   --global-carrinho-lixeira: #ff0000;
 
-  --global-preco-total-quantidade: #eeff00;
+  --global-preco-total-quantidade: #ffff00;
 
   --global-menu-hamburguer-hover: #00000073;
 
   --global-menu-hamburguer-border: #ffffff54;
+
+  --global-carrossel-bg-setas: #00000086;
+  --global-carrossel_setas: #ffffff;
 }
 
 .container_global {

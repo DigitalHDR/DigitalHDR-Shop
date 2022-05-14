@@ -60,7 +60,7 @@
   #ativa {
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    z-index: 1000;
     position: absolute;
     top: 79px;
     left: 0px;

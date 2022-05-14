@@ -31,7 +31,11 @@
 
 `Função no useEffect para fechar o menu-Hamburguer após a barra de rolagem da página ser ativado`
 
+# ATENÇÃO AS ESTRELAS NO HOME > CARROSSEL NÃO FUNCIONA POR QUE AS SETAS PEGA TODAS A LARGURA DO CONTEINER, ENTAO NÃO VAI FUNCIONAR NADA QUE ESTIVER EM BAIXO
+
 # função do alert caso item já estaja no carrinho mostrar outro tipo de alerta (tipo: item já esta no carrinho)
+
+# fazer função apos clicar fora do menu-hamburguer ele fecha.
 
 ===========
 `bug no alert não sei como resolver`
@@ -47,3 +51,5 @@
 # quando for criar componente enviar junto com o .map() se tiver junto com a tag pai que ela estiver, ficar mais facil.
 
 # criar um botao para cada elemento, tive problema de cor pois o btn do header é o mesmo do componente de card.
+
+# deixar o menu-hamburguer com 1000 de z-index assim fica sobre tudo na página, pois tiver problema na qual as setas do carrossel ficava por cima dele.

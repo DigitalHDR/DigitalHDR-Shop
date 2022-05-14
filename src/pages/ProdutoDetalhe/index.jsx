@@ -2,7 +2,6 @@
 import React from 'react'
 import './styles.css'
 import api from '../../data/apiDados'
-import { MdStar, MdStarHalf, MdStarBorder } from 'react-icons/md'
 import BotaoDetalhes from '../../components/BotaoDetalhes'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -10,9 +9,12 @@ import { addItem } from '../../store/modules/carrinho/actions'
 import formataDinheiro from '../../functions/dinheiroFormatado'
 import TituloDaPagina from '../../components/TitiloDaPagina'
 import porcentagemRiscada from '../../functions/porcentagemRiscada'
+import Stars from '../../components/Stars'
 
 export default function ProdutoDetalhe(props) {
-  function notify() {return null}
+  function notify() {
+    return null
+  }
 
   const dispatch = useDispatch()
 
@@ -39,13 +41,7 @@ export default function ProdutoDetalhe(props) {
               <strong className="nomeDeMarcas">DigitalHDR</strong>
             </p>
             <div className="box_star_preco">
-              <div className="star_id">
-                <MdStar className="star" />
-                <MdStar className="star" />
-                <MdStar className="star" />
-                <MdStarHalf className="star" />
-                <MdStarBorder className="star" />
-              </div>
+              <Stars />
               <span className="dinheiro_riscado">
                 {formataDinheiro(porcentagemRiscada(protudo.preco, 107))}
               </span>
