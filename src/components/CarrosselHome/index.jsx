@@ -33,7 +33,7 @@ export default function CarrosselHome() {
                       <img src={imagem} alt={titulo} />
                     </div>
                     <div className="carrossel_info">
-                      <p className="carrossel_titulo">
+                      <p className="carrossel_titulo ">
                         {titulo.substring(0, 60) + '...'}
                       </p>
                       <div className="carrossel_info_start">

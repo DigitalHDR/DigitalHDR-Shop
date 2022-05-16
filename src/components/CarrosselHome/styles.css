@@ -49,6 +49,8 @@
 
 .carrossel_titulo {
   flex-grow: 1;
+  font-weight: 500;
+  color: var(--global-titulos-pequenos-cor);
 }
 
 .carrossel_info .carrossel_preco {
