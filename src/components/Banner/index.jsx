@@ -18,7 +18,7 @@ export default function Banner() {
               <p>{item.descricao}</p>
               <div className="banner_box_btn box_btn">
                 <BotaoDetalhes btn={global}>
-                  <Link to={`/produtoDetalheBanner/${item.id}`}>Detalhes</Link>
+                  <Link to={`/produtoDetalhe/${item.id}`}>Detalhes</Link>
                 </BotaoDetalhes>
               </div>
             </div>

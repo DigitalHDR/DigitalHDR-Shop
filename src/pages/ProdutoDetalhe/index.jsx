@@ -19,7 +19,9 @@ export default function ProdutoDetalhe(props) {
   const dispatch = useDispatch()
 
   const { idProtudo } = useParams()
-  const protudo = api.especificacao.find((este) => este.id === Number(idProtudo))
+  const protudo =
+    api.especificacao.find(este => este.id === Number(idProtudo)) ||
+    api.bannerHome.find(este => este.id === Number(idProtudo))
 
   function AddItemNoCarrinho(item) {
     dispatch(addItem(item))
