@@ -16,8 +16,7 @@ export default function BotaoDetalhes(props) {
     })
 
   return (
-    <div
-      id="btnModificado"
+    <button
       onClick={props.addItem ? notify : null}
       type="submit"
       className='btn_detalhes'>
@@ -33,6 +32,6 @@ export default function BotaoDetalhes(props) {
         draggable={false}
         pauseOnHover={false}
       />
-    </div>
+    </button>
   )
 }

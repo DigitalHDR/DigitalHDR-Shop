@@ -31,17 +31,19 @@
 
 `Função no useEffect para fechar o menu-Hamburguer após a barra de rolagem da página ser ativado`
 
-# ATENÇÃO AS ESTRELAS NO HOME > CARROSSEL NÃO FUNCIONA POR QUE AS SETAS PEGA TODAS A LARGURA DO CONTEINER, ENTAO NÃO VAI FUNCIONAR NADA QUE ESTIVER EM BAIXO
+`Elemento carrossel add`
+
+`Nova rota dinâmica no elemento Banner, apenas para 1 item no qual é diferente dos outros, pois é um item promocional da loja`
 
 # função do alert caso item já estaja no carrinho mostrar outro tipo de alerta (tipo: item já esta no carrinho)
 
 # fazer função apos clicar fora do menu-hamburguer ele fecha.
 
-===========
-`bug no alert não sei como resolver`
-===========
+==========
+erro no elemento button sobre button
+==========
 
-
+<!-- ================Detalhes====================== -->
 # não criar componente de botão usando button da problema, que por enquanto não sei resolver, criar com div.
 
 # criar mais de um componente do tipo botão com div, e não dar margem.

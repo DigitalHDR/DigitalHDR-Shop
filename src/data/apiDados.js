@@ -51,7 +51,7 @@ const data = {
     },
     {
       id: 7,
-      titulo: 'PlayStation 5 2020 Nova Geração 825GB 1 Controle - Branco Sony',
+      titulo: 'PlayStation 5 2022 Nova Geração 825GB 1 Controle - Branco Sony',
       descricao:
         'novo PlayStation 5 diz tudo sobre o console lançado em 2020. Desfrute do carregamento extremamente rápido com o SSD de 825GB de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para PlayStation.',
       imagem: 'https://i.postimg.cc/5NwYyPBL/16.png',
@@ -204,6 +204,15 @@ const data = {
       preco: 432.37,
     },
   ],
-};
+  bannerHome: [
+    {
+      id: 1,
+      titulo: 'Console PlayStation 5 Controle Dual Sense Branco Preto',
+      descricao: 'A integração personalizada dos sistemas de console PS5 permite que os criadores extraiam dados do SSD tão rápido que eles podem desenvolver jogos de formas que antes seriam impossíveis.',
+      imagem: 'https://i.postimg.cc/T2tzmYsN/PS5.png',
+      preco: 3999.99,
+    }
+  ]
+}
 
-export default data;
+export default data
