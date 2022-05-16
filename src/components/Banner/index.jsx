@@ -1,3 +1,4 @@
+//src/components/banner
 import React from 'react'
 import './styles.css'
 import BotaoDetalhes from '../BotaoDetalhes'

@@ -206,7 +206,7 @@ const data = {
   ],
   bannerHome: [
     {
-      id: 1,
+      id: 0,
       titulo: 'Console PlayStation 5 Controle Dual Sense Branco Preto',
       descricao: 'A integração personalizada dos sistemas de console PS5 permite que os criadores extraiam dados do SSD tão rápido que eles podem desenvolver jogos de formas que antes seriam impossíveis.',
       imagem: 'https://i.postimg.cc/T2tzmYsN/PS5.png',

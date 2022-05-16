@@ -1,3 +1,4 @@
+//src/routes
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -22,5 +23,6 @@ export default function Rotas() {
       <Route path="/produtoDetalheBanner/:idProdutoBanner" element={<ProdutoDetalheBanner />} />
       <Route path="/carrinho" element={<Carrinho />} />
     </Routes>
-  );
+  )
 }
+

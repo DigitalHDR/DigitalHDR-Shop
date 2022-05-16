@@ -1,3 +1,4 @@
+//src/pages/produtodetalhebanner
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
