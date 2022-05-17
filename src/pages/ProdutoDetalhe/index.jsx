@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../../store/modules/carrinho/actions'
 import formataDinheiro from '../../functions/dinheiroFormatado'
-import TituloDaPagina from '../../components/TitiloDaPagina'
+import TituloDaPagina from '../../components/TituloDaPagina'
 import porcentagemRiscada from '../../functions/porcentagemRiscada'
 import Stars from '../../components/Stars'
 

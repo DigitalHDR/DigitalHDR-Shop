@@ -2,7 +2,7 @@
 import React from 'react'
 import './styles.css'
 import { useSelector } from 'react-redux'
-import TituloDaPagina from '../../components/TitiloDaPagina'
+import TituloDaPagina from '../../components/TituloDaPagina'
 import ValorTotal from '../../components/ValorTotal'
 import CartListProduto from '../../components/CartListProduto'
 

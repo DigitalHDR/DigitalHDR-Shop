@@ -1,9 +1,10 @@
 import React from 'react'
+import TituloDaPagina from '../../components/TituloDaPagina'
 
 export default function Login() {
   return (
     <>
-      <h1>Login</h1>
+      <TituloDaPagina>Login</TituloDaPagina>
     </>
   )
 }

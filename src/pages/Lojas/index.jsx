@@ -1,9 +1,10 @@
 import React from 'react';
+import TituloDaPagina from '../../components/TituloDaPagina'
 
 export default function Lojas() {
   return (
     <>
-      <h1>Lojas</h1>
+      <TituloDaPagina>Lojas</TituloDaPagina>
     </>
   );
 }

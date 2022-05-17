@@ -4,7 +4,7 @@ import './styles.css'
 import BotaoDetalhes from '../../components/BotaoDetalhes'
 import { Link } from 'react-router-dom'
 import formataDinheiro from '../../functions/dinheiroFormatado'
-import TituloDaPagina from '../../components/TitiloDaPagina'
+import TituloDaPagina from '../../components/TituloDaPagina'
 import Star from '../../components/Stars'
 
 export default function Produtos() {
