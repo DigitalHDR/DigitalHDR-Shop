@@ -1,6 +1,6 @@
 import Usuario from '../models/Usuario'
 
-export const retornaTodosUsuarios = async (req, res, next) => {
+export const TodosUsuarios = async (req, res, next) => {
   let usuarios
   try {
     usuarios = await Usuario.find()

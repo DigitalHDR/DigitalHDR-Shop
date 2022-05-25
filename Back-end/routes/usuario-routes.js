@@ -1,9 +1,9 @@
 import express from 'express'
 
-import { retornaTodosUsuarios } from '../controllers/usuario-controller'
+import { TodosUsuarios } from '../controllers/usuario-controller'
 
 const router = express.Router()
 
-router.get('/', retornaTodosUsuarios)
+router.get('/', TodosUsuarios)
 
 export default router
