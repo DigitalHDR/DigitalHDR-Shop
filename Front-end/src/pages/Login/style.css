@@ -1,0 +1,35 @@
+.box_form {
+  min-height: 63vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_form form label {
+    font-size: var(--global-titulos-pequenos-font);
+}
+
+.box_form form .loginOuCadastro {
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: var(--global-texto);
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: var(--global-texto);
+  font-weight: 500;
+}

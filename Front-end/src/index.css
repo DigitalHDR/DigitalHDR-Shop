@@ -11,6 +11,7 @@
 
 body {
   background-color: #1b1b1b;
+  /* background-color: #797272; */
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,6 +31,8 @@ code {
   --global-border-radius: 20px;
   
   --global-texto: #c7c4c4;
+
+  --global-size-botaoDetalhes: 18px;
   
   --global-card_bg: #4b4a4a;
   
