@@ -1,4 +1,5 @@
 import Usuario from '../models/Usuario'
+import bcrypt from 'bcryptjs'
 
 export const TodosUsuarios = async (req, res, next) => {
   let usuarios
@@ -24,10 +25,12 @@ export const CadastrarUsuario = async (req, res, next) => {
   if (usuarioExiste) {
     return res.status(400).json({ message: 'Usuário já Existe!' })
   }
+
+  const hashSenha = bcrypt.hashSync(senha)
   const novoUsuario = new Usuario({
     nome,
     email,
-    senha,
+    senha: hashSenha,
   })
   try {
     await novoUsuario.save()
