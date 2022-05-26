@@ -3,8 +3,10 @@ import './style.css'
 import TituloDaPagina from '../../components/TituloDaPagina'
 import BotaoLogin from '../../components/BotaoLogin'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
+  const navegacao = useNavigate()
   const [cadastrado, setCadastrado] = useState(false)
 
   const [inputs, setInputs] = useState({
@@ -35,6 +37,7 @@ export default function Login() {
     e.preventDefault()
     console.log(inputs)
     enviarPedido()
+    .then(() => navegacao('/'))
   }
 
   return (
