@@ -22,22 +22,30 @@ export default function Login() {
     }))
   }
 
-  const enviarPedido = async () => {
+  const enviarPedido = async (type = 'login') => {
     const res = await axios
-      .post('http://localhost:5000/api/TodosUsuarios/login', {
+      .post(`http://localhost:5000/api/TodosUsuarios/${type}`, {
+        nome: inputs.nome,
         email: inputs.email,
         senha: inputs.senha,
       })
-      .catch(err => console.log(err))
-    const data = res.data
+      // .catch(err => console.log(err))
+    const data = await res.data
     return data
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(inputs)
-    enviarPedido()
-    .then(() => navegacao('/'))
+    // console.log(inputs)
+    if (cadastrado) {
+      enviarPedido('Cadastrar')
+        // .then(data => console.log(data))
+        .then(() => navegacao('/'))
+    } else {
+      enviarPedido()
+        // .then(data => console.log(data))
+        .then(() => navegacao('/'))
+    }
   }
 
   return (
