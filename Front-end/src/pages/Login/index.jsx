@@ -1,40 +1,89 @@
 import React, { useState } from 'react'
 import './style.css'
 import TituloDaPagina from '../../components/TituloDaPagina'
-import BotaoDetalhes from '../../components/BotaoDetalhes'
+import BotaoLogin from '../../components/BotaoLogin'
+import axios from 'axios'
 
 export default function Login() {
   const [cadastrado, setCadastrado] = useState(false)
 
+  const [inputs, setInputs] = useState({
+    nome: '',
+    email: '',
+    senha: '',
+  })
+
+  const handleChange = e => {
+    setInputs(estadoAnterior => ({
+      ...estadoAnterior,
+      [e.target.name]: e.target.value,
+    }))
+  }
+
+  const enviarPedido = async () => {
+    const res = await axios
+      .post('http://localhost:5000/api/TodosUsuarios/login', {
+        email: inputs.email,
+        senha: inputs.senha,
+      })
+      .catch(err => console.log(err))
+    const data = res.data
+    return data
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(inputs)
+    enviarPedido()
+  }
+
   return (
     <div className="container_global">
       <div className="box_form">
-        <TituloDaPagina>{!cadastrado ? 'Login' : 'Cadastrar-se'}</TituloDaPagina>
-        <form>
-          <label>
-            Nome
-            <input type="text" />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="" id="" />
-          </label>
-
+        <TituloDaPagina>
+          {!cadastrado ? 'Login' : 'Cadastrar-se'}
+        </TituloDaPagina>
+        <form onSubmit={handleSubmit}>
           {cadastrado && (
             <label>
-              Senha
-              <input type="password" name="" id="" />
+              Nome
+              <input
+                type="text"
+                name="nome"
+                onChange={handleChange}
+                value={inputs.nome}
+              />
             </label>
           )}
 
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={inputs.email}
+            />
+          </label>
+
+          <label>
+            Senha
+            <input
+              type="password"
+              name="senha"
+              onChange={handleChange}
+              value={inputs.senha}
+            />
+          </label>
+
           <div className="box_btn">
-            <BotaoDetalhes>
+            <BotaoLogin btn={global}>
               {!cadastrado ? 'Fazer Login' : 'Cadastrar'}
-            </BotaoDetalhes>
+            </BotaoLogin>
           </div>
 
-          <p className='loginOuCadastro'
+          <p
+            className="loginOuCadastro"
             onClick={() => setCadastrado(!cadastrado)}
             style={{ color: '#fff', textAlign: 'center' }}
           >

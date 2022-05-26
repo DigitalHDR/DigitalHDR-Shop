@@ -12,14 +12,15 @@ export default function BotaoDetalhes(props) {
       closeOnClick: true,
       pauseOnHover: false,
       draggable: false,
-      progress: undefined
+      progress: undefined,
     })
 
   return (
     <div
       onClick={props.addItem ? notify : null}
       type="submit"
-      className='btn_detalhes'>
+      className="btn_detalhes"
+    >
       {props.children}
       <ToastContainer
         position="top-right"
