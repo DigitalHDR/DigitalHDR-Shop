@@ -4,8 +4,11 @@ import TituloDaPagina from '../../components/TituloDaPagina'
 import BotaoLogin from '../../components/BotaoLogin'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+// import { loginOuLogout } from '../../store/modules/autentificacao/actions'
 
 export default function Login() {
+  const dispatch = useDispatch()
   const navegacao = useNavigate()
   const [cadastrado, setCadastrado] = useState(false)
 
@@ -29,20 +32,29 @@ export default function Login() {
         email: inputs.email,
         senha: inputs.senha,
       })
-      // .catch(err => console.log(err))
+      .catch(err => console.log(err))
     const data = await res.data
     return data
   }
 
+  function handleLogin(cadastrado) {
+    dispatch({
+      type: 'LOGIN_OU_LOGOUT',
+      cadastrado,
+    })
+  }
+
   const handleSubmit = e => {
     e.preventDefault()
-    // console.log(inputs)
-    if (cadastrado) {
+    console.log(inputs)
+    if (!cadastrado) {
       enviarPedido('Cadastrar')
+        .then(() => handleLogin(!cadastrado))
         // .then(data => console.log(data))
         .then(() => navegacao('/'))
     } else {
       enviarPedido()
+        .then(() => handleLogin(cadastrado))
         // .then(data => console.log(data))
         .then(() => navegacao('/'))
     }
@@ -52,10 +64,10 @@ export default function Login() {
     <div className="container_global">
       <div className="box_form">
         <TituloDaPagina>
-          {!cadastrado ? 'Login' : 'Cadastrar-se'}
+          {cadastrado ? 'Login' : 'Cadastrar-se'}
         </TituloDaPagina>
         <form onSubmit={handleSubmit}>
-          {cadastrado && (
+          {!cadastrado && (
             <label>
               Nome
               <input
@@ -89,7 +101,7 @@ export default function Login() {
 
           <div className="box_btn">
             <BotaoLogin btn={global}>
-              {!cadastrado ? 'Fazer Login' : 'Cadastrar'}
+              {cadastrado ? 'Fazer Login' : 'Cadastrar'}
             </BotaoLogin>
           </div>
 
@@ -98,7 +110,7 @@ export default function Login() {
             onClick={() => setCadastrado(!cadastrado)}
             style={{ color: '#fff', textAlign: 'center' }}
           >
-            Clique aqui para {!cadastrado ? 'se Cadastrar' : 'Fazer o Login'}
+            Clique aqui para {cadastrado ? 'se Cadastrar' : 'Fazer o Login'}
           </p>
         </form>
       </div>

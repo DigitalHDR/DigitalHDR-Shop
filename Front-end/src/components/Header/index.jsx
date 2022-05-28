@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { BsMoonStars } from 'react-icons/bs';
-import './styles.css';
-import Botao from '../Botao';
-import { MdOutlineShoppingCart } from 'react-icons/md';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { BsMoonStars } from 'react-icons/bs'
+import './styles.css'
+import Botao from '../Botao'
+import { MdOutlineShoppingCart } from 'react-icons/md'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { useSelector } from 'react-redux'
 
 export default function Header(props) {
-  const itemQuantidade = useSelector((state) => state.carrinho);
+  const itemQuantidade = useSelector(state => state.carrinho)
+  const estaLogado = useSelector(state => state.autentificacao)
 
-  const [ativaMenu, setAtivaMenu] = useState(false);
+  const [ativaMenu, setAtivaMenu] = useState(false)
 
-  useEffect(()=> {
+  useEffect(() => {
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 1) {
+      if (window.scrollY > 1) {
         setAtivaMenu(false)
       }
     })
-  },[])
+  }, [])
 
   return (
     <header className="header_container">
@@ -28,22 +29,26 @@ export default function Header(props) {
         </h1>
 
         <nav id={ativaMenu ? 'ativa' : ''}>
-          <Link to="/" onClick={()=> setAtivaMenu(!ativaMenu)}>
+          <Link to="/" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Home</Botao>
           </Link>
-          <Link to="/produtos" onClick={()=> setAtivaMenu(!ativaMenu)}>
+          <Link to="/produtos" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Produtos</Botao>
           </Link>
-          <Link to="/lojas" onClick={()=> setAtivaMenu(!ativaMenu)}>
+          <Link to="/lojas" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Lojas</Botao>
           </Link>
-          <Link to="/sobre" onClick={()=> setAtivaMenu(!ativaMenu)}>
+          <Link to="/sobre" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Sobre</Botao>
           </Link>
-          <Link to="/login" onClick={()=> setAtivaMenu(!ativaMenu)}>
-            <Botao>Login</Botao>
-          </Link>
-          <Link to="/logout" onClick={()=> setAtivaMenu(!ativaMenu)}>
+
+          {!estaLogado && (
+            <Link to="/login" onClick={() => setAtivaMenu(!ativaMenu)}>
+              <Botao>Login</Botao>
+            </Link>
+          )}
+
+          <Link to="/logout" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao>Logout</Botao>
           </Link>
         </nav>
@@ -71,5 +76,5 @@ export default function Header(props) {
         </Link>
       </div>
     </header>
-  );
+  )
 }
