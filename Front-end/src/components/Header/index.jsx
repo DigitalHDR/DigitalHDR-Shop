@@ -48,9 +48,11 @@ export default function Header(props) {
             </Link>
           )}
 
-          <Link to="/logout" onClick={() => setAtivaMenu(!ativaMenu)}>
-            <Botao>Logout</Botao>
-          </Link>
+          {estaLogado && (
+            <Link to="/logout" onClick={() => setAtivaMenu(!ativaMenu)}>
+              <Botao>Logout</Botao>
+            </Link>
+          )}
         </nav>
 
         <div
