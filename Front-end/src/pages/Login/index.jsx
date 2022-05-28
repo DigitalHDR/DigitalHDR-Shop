@@ -5,7 +5,7 @@ import BotaoLogin from '../../components/BotaoLogin'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-// import { loginOuLogout } from '../../store/modules/autentificacao/actions'
+import { autentificaLoginLogout } from '../../store/modules/autentificacao/actions'
 
 export default function Login() {
   const dispatch = useDispatch()
@@ -38,10 +38,7 @@ export default function Login() {
   }
 
   function handleLogin(cadastrado) {
-    dispatch({
-      type: 'LOGIN_OU_LOGOUT',
-      cadastrado,
-    })
+    dispatch(autentificaLoginLogout(cadastrado))
   }
 
   const handleSubmit = e => {
@@ -50,12 +47,10 @@ export default function Login() {
     if (!cadastrado) {
       enviarPedido('Cadastrar')
         .then(() => handleLogin(!cadastrado))
-        // .then(data => console.log(data))
         .then(() => navegacao('/'))
     } else {
       enviarPedido()
         .then(() => handleLogin(cadastrado))
-        // .then(data => console.log(data))
         .then(() => navegacao('/'))
     }
   }
@@ -63,9 +58,7 @@ export default function Login() {
   return (
     <div className="container_global">
       <div className="box_form">
-        <TituloDaPagina>
-          {cadastrado ? 'Login' : 'Cadastrar-se'}
-        </TituloDaPagina>
+        <TituloDaPagina>{cadastrado ? 'Login' : 'Cadastrar-se'}</TituloDaPagina>
         <form onSubmit={handleSubmit}>
           {!cadastrado && (
             <label>
