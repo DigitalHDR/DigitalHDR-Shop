@@ -5,12 +5,12 @@ import './styles.css'
 import Botao from '../Botao'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function Header(props) {
   const itemQuantidade = useSelector(state => state.carrinho)
   const estaLogado = useSelector(state => state.autentificacao)
-
+  const dispatch = useDispatch()
   const [ativaMenu, setAtivaMenu] = useState(false)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function Header(props) {
           )}
 
           {estaLogado && (
-            <Link to="/logout" onClick={() => setAtivaMenu(!ativaMenu)}>
+            <Link to="/" onClick={() => dispatch(!estaLogado)}>
               <Botao>Logout</Botao>
             </Link>
           )}
