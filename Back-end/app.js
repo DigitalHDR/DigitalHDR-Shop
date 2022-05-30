@@ -8,7 +8,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/api/TodosUsuarios', router)
-// app.use('/api/Cadastrar', router) (acho)não precisa dessa rota pra funcionar 
 
 const mongoDbUrl = process.env.MONGODB_URL
 

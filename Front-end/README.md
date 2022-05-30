@@ -55,3 +55,23 @@ erro no elemento button sobre button
 # criar um botao para cada elemento, tive problema de cor pois o btn do header é o mesmo do componente de card.
 
 # deixar o menu-hamburguer com 1000 de z-index assim fica sobre tudo na página, pois tiver problema na qual as setas do carrossel ficava por cima dele.
+
+# usar o <Provider store={store}> do Redux sempre no arquivo index, pois tive problema usando do arquivo App, que não estava sendo encontrando.
+
+# quando for usar o localStorage para deixar o id salvo ou outra coisa do tipo, verificar se esta na rota de login ou de logout, perdi 30 minutos por falta de atenção, coloquei localStorage na rota de cadrastro e estava vendo no navegador a rota de login. muita atenção nessa parte.
+
+=======================================================================
+=======================================================================
+Backend abaixo
+=======================================================================
+=======================================================================
+# Guia
+
+Base url `http://localhost:5000/api`
+Url get TodosUsuarios `http://localhost:5000/api/TodosUsuarios`
+=======================================================================
+Url post CadastrarUsuario `http://localhost:5000/api/TodosUsuarios/Cadastrar`
+parece, esse rota é com base na /api/TodosUsuarios, ou seja os dados que estiverem lá
+=======================================================================
+caso a senha for muito facíl, vai aparecer uma msg, se for uma senha com numero letra e letra especial não vai.
+=======================================================================

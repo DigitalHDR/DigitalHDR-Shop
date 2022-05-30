@@ -1,6 +1,13 @@
-export function autentificaLoginLogout(cadastrado) {
+export function autentificaLogin(cadastrado) {
   return {
-    type: 'LOGIN_OU_LOGOUT',
+    type: 'LOGIN',
     cadastrado,
+  }
+}
+
+export function autentificaLogout(logout) {
+  return {
+    type: 'LOGOUT',
+    logout
   }
 }

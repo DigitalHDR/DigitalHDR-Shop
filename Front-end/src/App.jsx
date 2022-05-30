@@ -1,17 +1,23 @@
 //scr/app
-import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-
-import Header from './components/Header';
-import Rotas from './routes';
-import Footer from './components/Footer';
-
-import store from './store';
+import React, { useEffect } from 'react'
+import './App.css'
+import Header from './components/Header'
+import Rotas from './routes'
+import Footer from './components/Footer'
+import { BrowserRouter } from 'react-router-dom'
+import { useDispatch  } from 'react-redux'
+import { autentificaLogin } from './store/modules/autentificacao/actions'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (localStorage.getItem('idUsuario')) {
+      dispatch(autentificaLogin())
+    }
+  }, [dispatch])
+
   return (
-    <Provider store={store}>
       <BrowserRouter>
         <div>
           <div>
@@ -25,8 +31,7 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
-    </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

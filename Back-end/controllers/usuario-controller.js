@@ -56,5 +56,7 @@ export const LoginUsuario = async (req, res, next) => {
   if (!senhaCorreta) {
     return res.status(400).json({ message: 'Senha incorreta!' })
   }
-  return res.status(200).json({ message: 'Sucesso no Login' })
+  return res
+    .status(200)
+    .json({ message: 'Sucesso no Login', usuario: usuarioExiste })
 }

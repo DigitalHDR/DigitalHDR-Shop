@@ -5,7 +5,7 @@ import BotaoLogin from '../../components/BotaoLogin'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { autentificaLoginLogout } from '../../store/modules/autentificacao/actions'
+import { autentificaLogin } from '../../store/modules/autentificacao/actions'
 
 export default function Login() {
   const dispatch = useDispatch()
@@ -34,22 +34,25 @@ export default function Login() {
       })
       .catch(err => console.log(err))
     const data = await res.data
+    console.log(data._id)
     return data
   }
 
   function handleLogin(cadastrado) {
-    dispatch(autentificaLoginLogout(cadastrado))
+    dispatch(autentificaLogin(cadastrado))
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(inputs)
+    // console.log(inputs)
     if (!cadastrado) {
       enviarPedido('Cadastrar')
+        .then(data => localStorage.setItem('idUsuario', data.usuario._id))
         .then(() => handleLogin(!cadastrado))
         .then(() => navegacao('/'))
     } else {
       enviarPedido()
+        .then(data => localStorage.setItem('idUsuario', data.usuario._id))
         .then(() => handleLogin(cadastrado))
         .then(() => navegacao('/'))
     }

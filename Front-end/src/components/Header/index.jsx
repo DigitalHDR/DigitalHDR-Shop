@@ -6,6 +6,8 @@ import Botao from '../Botao'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { useSelector, useDispatch } from 'react-redux'
+import { autentificaLogout } from '../../store/modules/autentificacao/actions'
+
 
 export default function Header(props) {
   const itemQuantidade = useSelector(state => state.carrinho)
@@ -21,6 +23,10 @@ export default function Header(props) {
     })
   }, [])
 
+  function handleLogout(logout) {
+    dispatch(autentificaLogout(logout))
+  }
+
   return (
     <header className="header_container">
       <div className="container_global header_menu">
@@ -35,9 +41,6 @@ export default function Header(props) {
           <Link to="/produtos" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Produtos</Botao>
           </Link>
-          <Link to="/lojas" onClick={() => setAtivaMenu(!ativaMenu)}>
-            <Botao btn={global}>Lojas</Botao>
-          </Link>
           <Link to="/sobre" onClick={() => setAtivaMenu(!ativaMenu)}>
             <Botao btn={global}>Sobre</Botao>
           </Link>
@@ -49,7 +52,7 @@ export default function Header(props) {
           )}
 
           {estaLogado && (
-            <Link to="/" onClick={() => dispatch(!estaLogado)}>
+            <Link to="/" onClick={() => handleLogout(!estaLogado)}>
               <Botao>Logout</Botao>
             </Link>
           )}
