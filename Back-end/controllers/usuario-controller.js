@@ -1,5 +1,6 @@
 import Usuario from '../models/Usuario'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 export const TodosUsuarios = async (req, res, next) => {
   let usuarios
@@ -56,7 +57,25 @@ export const LoginUsuario = async (req, res, next) => {
   if (!senhaCorreta) {
     return res.status(400).json({ message: 'Senha incorreta!' })
   }
-  return res
-    .status(200)
-    .json({ message: 'Sucesso no Login', usuario: usuarioExiste })
+
+  try {
+    const secret = process.env.TOKEN_JWT
+
+    const token = jwt.sign(
+      {
+        id: usuarioExiste._id,
+      },
+      secret,
+      {
+        expiresIn: '1h',
+      }
+    )
+    res.status(200).json({
+      message: 'Sucesso no Login',
+      usuario: usuarioExiste,
+      token: token,
+    })
+  } catch (err) {
+    return console.log(err)
+  }
 }
