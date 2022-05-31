@@ -8,6 +8,6 @@ export function autentificaLogin(cadastrado) {
 export function autentificaLogout(logout) {
   return {
     type: 'LOGOUT',
-    logout
+    logout,
   }
 }

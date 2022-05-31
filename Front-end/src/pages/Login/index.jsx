@@ -45,13 +45,11 @@ export default function Login() {
     e.preventDefault()
     if (!cadastrado) {
       enviarPedido('Cadastrar')
-        // .then(data => localStorage.setItem('idUsuario', data.usuario._id)) //! POR ID
         .then(data => localStorage.setItem('tokenUsuario', data.token))
         .then(() => handleLogin(!cadastrado))
         .then(() => navegacao('/'))
     } else {
       enviarPedido()
-        // .then(data => localStorage.setItem('idUsuario', data.usuario._id)) //! POR ID
         .then(data => localStorage.setItem('tokenUsuario', data.token))
         .then(() => handleLogin(cadastrado))
         .then(() => navegacao('/'))

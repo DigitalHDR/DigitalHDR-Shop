@@ -32,12 +32,18 @@ export const CadastrarUsuario = async (req, res, next) => {
     email,
     senha: hashSenha,
   })
-  try {
-    await novoUsuario.save()
-  } catch (err) {
-    return console.log(err)
-  }
-  return res.status(201).json({ novoUsuario })
+  const secret = process.env.TOKEN_JWT
+  const token = jwt.sign(
+    {
+      id: novoUsuario._id,
+    },
+    secret,
+    {
+      expiresIn: '300',
+    }
+  )
+  await novoUsuario.save()
+  return res.status(201).json({ novoUsuario, token: token })
 }
 
 export const LoginUsuario = async (req, res, next) => {
@@ -57,26 +63,20 @@ export const LoginUsuario = async (req, res, next) => {
   if (!senhaCorreta) {
     return res.status(400).json({ message: 'Senha incorreta!' })
   }
-
-  try {
-    const secret = process.env.TOKEN_JWT
-
-    const token = jwt.sign(
-      {
-        id: usuarioExiste._id,
-      },
-      secret,
-      {
-        expiresIn: '300',
-      }
-    )
-    res.status(200).json({
-      message: 'Sucesso no Login',
-      usuario: usuarioExiste,
-      token: token,
-    })
-  } catch (err) {
-    return console.log(err)
-    // res.status(401).end()
-  }
+  const secret = process.env.TOKEN_JWT
+  const token = jwt.sign(
+    {
+      id: usuarioExiste._id,
+    },
+    secret,
+    {
+      expiresIn: '300',
+    }
+  )
+  res.status(200).json({
+    message: 'Sucesso no Login',
+    usuario: usuarioExiste,
+    token: token,
+  })
+  return console.log(err)
 }
