@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (localStorage.getItem('idUsuario')) {
+    if (localStorage.getItem('tokenUsuario')) {
       dispatch(autentificaLogin())
     }
   }, [dispatch])

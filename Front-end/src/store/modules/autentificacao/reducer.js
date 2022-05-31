@@ -4,7 +4,7 @@ export default function autentificacao(state = false, action) {
       return (state = true)
       
     case 'LOGOUT':
-      state = localStorage.removeItem('idUsuario')
+      state = localStorage.removeItem('tokenUsuario')
       return state.cadastrado = false
 
     default:

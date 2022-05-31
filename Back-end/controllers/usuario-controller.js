@@ -67,7 +67,7 @@ export const LoginUsuario = async (req, res, next) => {
       },
       secret,
       {
-        expiresIn: '1h',
+        expiresIn: '300',
       }
     )
     res.status(200).json({
@@ -77,5 +77,6 @@ export const LoginUsuario = async (req, res, next) => {
     })
   } catch (err) {
     return console.log(err)
+    // res.status(401).end()
   }
 }

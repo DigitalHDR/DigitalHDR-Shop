@@ -34,7 +34,6 @@ export default function Login() {
       })
       .catch(err => console.log(err))
     const data = await res.data
-    console.log(data._id)
     return data
   }
 
@@ -44,15 +43,16 @@ export default function Login() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    // console.log(inputs)
     if (!cadastrado) {
       enviarPedido('Cadastrar')
-        .then(data => localStorage.setItem('idUsuario', data.usuario._id))
+        // .then(data => localStorage.setItem('idUsuario', data.usuario._id)) //! POR ID
+        .then(data => localStorage.setItem('tokenUsuario', data.token))
         .then(() => handleLogin(!cadastrado))
         .then(() => navegacao('/'))
     } else {
       enviarPedido()
-        .then(data => localStorage.setItem('idUsuario', data.usuario._id))
+        // .then(data => localStorage.setItem('idUsuario', data.usuario._id)) //! POR ID
+        .then(data => localStorage.setItem('tokenUsuario', data.token))
         .then(() => handleLogin(cadastrado))
         .then(() => navegacao('/'))
     }
