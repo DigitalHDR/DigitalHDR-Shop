@@ -4,7 +4,7 @@ import {
   CadastrarUsuario,
   LoginUsuario,
   TodosUsuarios,
-} from '../controllers/usuario-controller'
+} from '../controllers/usuario-controller.js'
 
 const router = express.Router()
 

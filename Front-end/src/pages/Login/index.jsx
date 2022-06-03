@@ -27,7 +27,7 @@ export default function Login() {
 
   const enviarPedido = async (type = 'login') => {
     const res = await axios
-      .post(`http://localhost:5000/api/TodosUsuarios/${type}`, {
+      .post(`https://hdr-shop.herokuapp.com/api/TodosUsuarios/${type}`, {
         nome: inputs.nome,
         email: inputs.email,
         senha: inputs.senha,
