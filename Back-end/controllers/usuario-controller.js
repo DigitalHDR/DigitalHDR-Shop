@@ -32,18 +32,22 @@ export const CadastrarUsuario = async (req, res, next) => {
     email,
     senha: hashSenha,
   })
-  const secret = process.env.TOKEN_JWT
-  const token = jwt.sign(
-    {
-      id: novoUsuario._id,
-    },
-    secret,
-    {
-      expiresIn: '300',
-    }
-  )
-  await novoUsuario.save()
-  return res.status(201).json({ novoUsuario, token: token })
+  try {
+    const secret = process.env.TOKEN_JWT
+    const token = jwt.sign(
+      {
+        id: novoUsuario._id,
+      },
+      secret,
+      {
+        expiresIn: '300',
+      }
+    )
+    await novoUsuario.save()
+    return res.status(201).json({ novoUsuario, token: token })
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const LoginUsuario = async (req, res, next) => {
