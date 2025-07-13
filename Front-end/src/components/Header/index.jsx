@@ -7,6 +7,7 @@ import { MdOutlineShoppingCart } from 'react-icons/md'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { useSelector, useDispatch } from 'react-redux'
 import { autentificaLogout } from '../../store/modules/autentificacao/actions'
+import { jwtDecode } from 'jwt-decode'
 
 
 export default function Header(props) {
@@ -14,6 +15,7 @@ export default function Header(props) {
   const estaLogado = useSelector(state => state.autentificacao)
   const dispatch = useDispatch()
   const [ativaMenu, setAtivaMenu] = useState(false)
+  const [nomeUsuario, setNomeUsuario] = useState('')
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -22,6 +24,20 @@ export default function Header(props) {
       }
     })
   }, [])
+
+  useEffect(() => {
+    if (estaLogado && localStorage.getItem('tokenUsuario')) {
+      try {
+        const token = localStorage.getItem('tokenUsuario')
+        const decoded = jwtDecode(token)
+        setNomeUsuario(decoded.nome || decoded.email || '')
+      } catch (e) {
+        setNomeUsuario('')
+      }
+    } else {
+      setNomeUsuario('')
+    }
+  }, [estaLogado])
 
   function handleLogout(logout) {
     dispatch(autentificaLogout(logout))
@@ -52,9 +68,12 @@ export default function Header(props) {
           )}
 
           {estaLogado && (
-            <Link to="/" onClick={() => handleLogout(!estaLogado)}>
-              <Botao>Logout</Botao>
-            </Link>
+            <>
+              <span style={{ color: '#fff', marginRight: 10 }}>{nomeUsuario}</span>
+              <Link to="/" onClick={() => handleLogout(!estaLogado)}>
+                <Botao>Logout</Botao>
+              </Link>
+            </>
           )}
         </nav>
 

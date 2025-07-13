@@ -10,7 +10,7 @@ app.use(express.json())
 app.use('/api/TodosUsuarios', router)
 
 const mongoDbUrl = process.env.MONGODB_URL
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 
 mongoose
   .connect(mongoDbUrl)

@@ -37,6 +37,8 @@ export const CadastrarUsuario = async (req, res, next) => {
     const token = jwt.sign(
       {
         id: novoUsuario._id,
+        nome: novoUsuario.nome,
+        email: novoUsuario.email
       },
       secret,
       {
@@ -72,6 +74,8 @@ export const LoginUsuario = async (req, res, next) => {
     const token = jwt.sign(
       {
         id: usuarioExiste._id,
+        nome: usuarioExiste.nome,
+        email: usuarioExiste.email
       },
       secret,
       {

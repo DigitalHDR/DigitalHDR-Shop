@@ -13,6 +13,7 @@ export default function Carrinho() {
       <TituloDaPagina>Lista de Ítens no Carrinho</TituloDaPagina>
       <CartListProduto />
       {itensAdicionados.length > 0 && <ValorTotal />}
+      {/*  */}
     </div>
   )
 }
