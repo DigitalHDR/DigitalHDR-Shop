@@ -9,6 +9,7 @@ import Lojas from './pages/Lojas'
 import Sobre from './pages/Sobre'
 import Login from './pages/Login'
 import Carrinho from './pages/Carrinho'
+import Compra from './pages/Compra'
 
 export default function Rotas() {
   return (
@@ -20,6 +21,7 @@ export default function Rotas() {
       <Route path="/login" element={<Login />} />
       <Route path="/produtoDetalhe/:idProtudo" element={<ProdutoDetalhe />} />
       <Route path="/carrinho" element={<Carrinho />} />
+      <Route path="/compra" element={<Compra />} />
     </Routes>
   )
 }

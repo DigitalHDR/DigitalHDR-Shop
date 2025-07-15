@@ -1,0 +1,391 @@
+.compra_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.itens_container {
+    background-color: var(--global-card_bg);
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.itens_container h3 {
+    color: var(--global-texto);
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.item_compra {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #555;
+    align-items: center;
+}
+
+.item_compra:last-child {
+    border-bottom: none;
+}
+
+.item_compra img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.item_info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item_info h4 {
+    color: var(--global-texto);
+    font-size: 14px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.item_info p {
+    color: #ccc;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.total_compra {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #555;
+}
+
+.total_compra h3 {
+    color: var(--global-preco-cor);
+    font-size: 20px;
+    text-align: center;
+}
+
+.formulario_container {
+    background-color: var(--global-card_bg);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formulario_container h3 {
+    color: var(--global-texto);
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.formulario_compra {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form_section {
+    border-bottom: 1px solid #555;
+    padding-bottom: 20px;
+}
+
+.form_section:last-child {
+    border-bottom: none;
+}
+
+.form_section h4 {
+    color: var(--global-texto);
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_group label {
+    color: var(--global-texto);
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form_group input {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #333;
+    color: var(--global-texto);
+    font-size: 14px;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form_group input:focus {
+    outline: none;
+    border-color: var(--global-preco-cor);
+}
+
+.form_group input.error {
+    border-color: #ff4444;
+}
+
+.error_message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form_actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form_actions button {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .compra_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .itens_container {
+        max-height: 400px;
+    }
+
+    .formulario_container {
+        padding: 25px;
+    }
+
+    .form_row {
+        gap: 15px;
+    }
+}
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+    .compra_container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .itens_container {
+        padding: 15px;
+        max-height: 350px;
+    }
+
+    .itens_container h3 {
+        font-size: 16px;
+    }
+
+    .item_compra {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .item_compra img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .item_info h4 {
+        font-size: 13px;
+    }
+
+    .item_info p {
+        font-size: 11px;
+    }
+
+    .total_compra h3 {
+        font-size: 18px;
+    }
+
+    .formulario_container {
+        padding: 20px;
+    }
+
+    .formulario_container h3 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .form_section {
+        padding-bottom: 15px;
+    }
+
+    .form_section h4 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form_row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .form_group input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .form_group label {
+        font-size: 13px;
+    }
+
+    .error_message {
+        font-size: 11px;
+    }
+
+    .form_actions button {
+        padding: 12px 30px;
+        font-size: 14px;
+        min-width: 180px;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    .compra_container {
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .itens_container {
+        padding: 12px;
+        max-height: 300px;
+    }
+
+    .itens_container h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .item_compra {
+        padding: 12px 0;
+    }
+
+    .item_compra img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item_info h4 {
+        font-size: 12px;
+    }
+
+    .item_info p {
+        font-size: 10px;
+    }
+
+    .total_compra {
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+
+    .total_compra h3 {
+        font-size: 16px;
+    }
+
+    .formulario_container {
+        padding: 15px;
+    }
+
+    .formulario_container h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .formulario_compra {
+        gap: 20px;
+    }
+
+    .form_section {
+        padding-bottom: 12px;
+    }
+
+    .form_section h4 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .form_row {
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .form_group input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .form_group label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .error_message {
+        font-size: 10px;
+    }
+
+    .form_actions {
+        margin-top: 20px;
+    }
+
+    .form_actions button {
+        padding: 10px 25px;
+        font-size: 13px;
+        min-width: 160px;
+    }
+}
+
+/* Mobile muito pequeno (até 360px) */
+@media (max-width: 360px) {
+    .itens_container {
+        padding: 10px;
+    }
+
+    .formulario_container {
+        padding: 12px;
+    }
+
+    .form_group input {
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .form_group label {
+        font-size: 11px;
+    }
+
+    .form_actions button {
+        padding: 8px 20px;
+        font-size: 12px;
+        min-width: 140px;
+    }
+}

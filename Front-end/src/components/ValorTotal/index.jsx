@@ -1,10 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import formataDinheiro from '../../functions/dinheiroFormatado';
+import Botao from '../Botao';
 import './style.css';
 
 export default function ValorTotal() {
   const itensAdicionados = useSelector((state) => state.carrinho);
+  const navigate = useNavigate();
 
   let total = 0;
   const somaTotalDeItens = (apenasUmparametro) => {
@@ -14,6 +17,11 @@ export default function ValorTotal() {
   let quantidadeTotal = 0;
   const somaQuantidadeTotal = (e) => {
     quantidadeTotal += e.quantidade;
+  };
+
+  const handleFazerCompra = () => {
+    console.log('Botão clicado - redirecionando para /compra');
+    navigate('/compra');
   };
 
   return (
@@ -55,6 +63,23 @@ export default function ValorTotal() {
               </span>
             </div>
           </div>
+        </div>
+        
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <button 
+            onClick={handleFazerCompra}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#eeff00',
+              color: '#000',
+              border: 'none',
+              borderRadius: '20px',
+              cursor: 'pointer',
+              fontWeight: '600'
+            }}
+          >
+            Fazer a compra
+          </button>
         </div>
       </div>
     </div>
